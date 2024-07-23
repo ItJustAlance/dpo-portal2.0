@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import type {UnwrapNestedRefs} from "@vue/reactivity";
+import type { UnwrapNestedRefs } from "@vue/reactivity";
 
 interface UserPayloadInterface {
   payload: object;
@@ -15,14 +15,14 @@ export const useAuthStore = defineStore('auth', {
   }),
   actions: {
     async authenticateUser(payload: UnwrapNestedRefs<{
-        data: { password: string; rememberMe: boolean; email: string };
+        data: { password: string; rememberMe: boolean; phone: string };
         pending: boolean;
         error: string
     }> & {}) {
       const { login } = useAuth();
       console.log('payload', payload)
       // useFetch from nuxt 3
-      const result: any = await login(payload.data.email, payload.data.password, payload.data.rememberMe);
+      const result: any = await login(payload.data.phone, payload.data.password, payload.data.rememberMe);
       
       // const { data, pending }: any = await useFetch('https://dummyjson.com/auth/login', {
       //   method: 'post',

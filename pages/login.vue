@@ -1,4 +1,6 @@
+
 <script lang="ts" setup>
+
 import { storeToRefs } from 'pinia'
 import { useAuthStore } from '@/stores/auth'
 
@@ -9,9 +11,10 @@ definePageMeta({
 
 // const { login } = useAuth();
 
+
 const form = reactive({
   data: {
-    email: "admin@gmail.com",
+    phone: "admin@gmail.com",
     password: "password",
     rememberMe: false,
   },
