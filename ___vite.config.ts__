@@ -1,0 +1,95 @@
+import { fileURLToPath, URL } from 'node:url'
+
+import { resolve } from 'node:path'
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+// import ViteSvgSpriteWrapper from 'vite-svg-sprite-wrapper';
+// import vitePluginRequire from "vite-plugin-require";
+import svgLoader from 'vite-svg-loader'
+
+export default defineConfig(({ command, mode }) => {
+  // let proxy = mode === 'development'
+  // 	? {
+  // 		'^/example/.*': {
+  // 			target: 'https://mysite.loc/',
+  // 			changeOrigin: true,
+  // 			secure: false,
+  // 			rejectUnauthorized: false,
+  // 		}
+  //
+  // 	}
+  // 	: {};
+  return {
+    plugins: [
+      vue(),
+      // vitePluginRequire.default(),
+      svgLoader({
+        svgoConfig: {
+          multipass: true,
+          plugins: [
+            {
+              name: 'preset-default',
+              params: {
+                overrides: {
+                  // viewBox is required to resize SVGs with CSS.
+                  // @see https://github.com/svg/svgo/issues/1128
+                  removeViewBox: false
+                }
+              }
+            }
+          ]
+        }
+      })
+      // ViteSvgSpriteWrapper({}),
+    ],
+    resolve: {
+      alias: [
+        { find: '@', replacement: resolve(__dirname, './src') },
+        {
+          find: '@img',
+          replacement: resolve(__dirname, './src/assets/img')
+        }
+      ]
+    },
+    base: mode === 'development' ? './' : '/js/vue-filter',
+    css: {
+      preprocessorOptions: {
+        scss: {
+          // additionalData: `@import "./src/scss/_app.scss";`
+        }
+      },
+      devSourcemap: true // this one
+    },
+    // build: {
+    //   outDir: '../../www/js/vue-filter/',
+    //   emptyOutDir: true,
+    //   minify: mode !== 'development',
+    //   rollupOptions: {
+    //     output: {
+    //       assetFileNames: 'assets/[name][extname]',
+    //       // assetFileNames: '[ext]/[name][extname]',
+    //       chunkFileNames: 'js/[name].js',
+    //       entryFileNames: 'js/app.js'
+    //     }
+    //   }
+    // }
+    // build: {
+    // 	sourcemap: true,
+    // },
+    // server: {
+    // 	port: 4500, // 设置服务启动端口号
+    // 	open: true, // 设置服务启动时是否自动打开浏览器
+    // 	cors: false, // 允许跨域
+    //
+    // 	// 设置代理，根据我们项目实际情况配置
+    // 	// proxy: {
+    // 	//   '/api': {
+    // 	//     target: 'https://7t.novostroy-m.ru/api',
+    // 	//     changeOrigin: true,
+    // 	//     secure: false,
+    // 	//     rewrite: (path) => path.replace('/api/', '/')
+    // 	//   }
+    // 	// },
+    // }
+  }
+})

@@ -1,0 +1,46 @@
+.footer
+  background: $clrPrimaryPressed
+  padding: 40px
+  width: 100%
+  color: #fff
+  +r($lg)
+    padding: 20px 0
+  .copy
+    padding-top: 60px
+    text-align: center
+    font-size: 16px
+    color: $clrGrey40
+  .box-info-banner
+    margin-bottom: 60px
+  &-cols
+    display: flex
+    gap: 60px
+  &-col-info
+    display: flex
+    flex-direction: column
+    width: 100%
+    max-width: 300px    
+    
+    .text
+      font-weight: bold
+      margin-bottom: auto
+  &-nav
+    flex: 1 1 auto
+    display: flex
+    gap: 60px
+    font-size: 14px
+    &__title
+      font-weight: bold
+      padding-bottom: 4px
+      margin-bottom: 6px
+      border-bottom: 1px solid $clrGrey70
+    &__col
+      width: 33.333%
+  .foot-menu
+    font-size: 18px
+    li
+      display: block
+      &+li
+        padding-top: 6px
+      a
+        color: #fff

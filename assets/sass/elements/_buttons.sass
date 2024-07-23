@@ -1,0 +1,116 @@
+a
+  color: $clrPrimaryMain
+  text-decoration: none
+  transition: all 0.3s ease
+  &:hover, &:focus
+    text-decoration: none
+    color: $clrPrimaryHover
+
+
+
+// buttons
+button
+  -webkit-appearance: none
+  border: 0
+  box-shadow: none
+  cursor: pointer
+  background: none
+  &:focus
+    outline: none
+
+.btn
+  display: inline-flex
+  position: relative
+  align-items: center
+  justify-content: center
+  text-align: center
+  cursor: pointer
+  transition: all $transitionSpeed $ease
+  color: $clrGrey10
+  background: $clrPrimaryMain
+  border-radius: 100px
+  padding: 12px 32px
+  font-weight: 700
+  border: 1px solid $clrPrimaryMain
+  +r($xl)
+    padding: 7rem 10rem
+  +r($lg)
+    padding: 11rem 10rem
+  .btn-label + .svg-icon
+    margin-left: 10px
+  .svg-icon
+    //fill: currentColor
+    & + .btn-label
+      margin-left: 4px
+      +r($lg)
+        margin-right: 4rem
+    
+  &:focus, &:active
+    outline: none
+  &:hover
+    background: $clrPrimaryHover
+    color: #fff
+    border-color: $clrPrimaryHover
+  
+  
+  &--second
+    color: $clrPrimaryMain
+    background: $clrPrimarySecond
+    border-color: $clrPrimarySecond
+    &:hover
+      color: $clrPrimaryHover
+      background: $clrPrimarySecond
+  &--white
+    color: $clrGrey90
+    background: $clrGrey10
+    border-color: $clrGrey10
+    &:hover
+      color: $clrGrey10
+      background: $clrPrimaryMain
+      border-color: $clrPrimaryMain
+  &--gray
+    border-color: $clrPrimaryMain
+    color: $clrPrimaryMain
+    background: $clrGrey20
+    &:hover
+      color: $clrGrey10
+      background: $clrPrimaryHover
+      border-color: $clrPrimaryHover
+  &--border
+    border-color: $clrPrimaryBorder
+    color: $clrPrimaryMain
+    background: #fff
+    &:hover
+      color: $clrPrimaryHover
+      background: #fff
+      border-color: $clrPrimaryHover
+  
+  &--inline
+    border-color: rgba(255,255,255, 0)
+    background: none
+    color: $clrPrimaryMain
+    padding-left: 16px
+    padding-right: 16px
+    &:hover
+      background: none
+      border-color: rgba(255,255,255, 0)
+      color: $clrPrimaryHover
+  &.--disabled, &--disabled
+    background: $clrGrey20
+    color: $clrGrey50
+    border-color: $clrGrey20
+  &--warning-second
+    color: $clrWarningMain
+    background: $clrWarningSecondary
+    border-color: $clrWarningSecondary
+    &:hover
+      color: $clrWarningHover
+      background: $clrWarningMain
+  &--warning
+    color: #fff
+    background: $clrWarningMain
+    border-color: $clrWarningMain
+    &:hover
+      color: #fff
+      background: $clrWarningHover
+  

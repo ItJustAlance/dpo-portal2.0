@@ -1,0 +1,48 @@
+.header
+  width: 100%
+  position: relative
+  z-index: 1
+  padding: 27px 0
+  .all
+    display: flex
+    align-items: center
+  &__logo
+    min-width: 40px
+    margin-right: 24px
+  &__nav
+    display: flex
+    align-items: center
+    flex: 1 1 auto
+    margin-right: 24px
+    &-menu
+      padding: 0
+      margin: 0
+      list-style: none
+      font-weight: 700
+      display: flex
+      align-items: center
+      justify-content: space-between
+      flex: 1 1 auto
+      .nav-menu-item
+        &__link
+          display: block
+          position: relative
+          padding: 8px 16px
+          color: $clrGrey90
+    .submenu
+      display: none
+  &__right
+    display: flex
+    margin-left: auto
+    .b-links-logins
+      .btn
+        &+.btn
+          margin-left: 24px
+    .b-view-low-vision
+      margin-left: 24px
+      display: flex
+      align-items: center
+      &:hover
+        opacity: .8
+      svg
+        fill: none
