@@ -1,20 +1,17 @@
-
 <script lang="ts" setup>
-
-import { storeToRefs } from 'pinia'
-import { useAuthStore } from '@/stores/auth'
+import { storeToRefs } from "pinia";
+import { useAuthStore } from "@/stores/auth";
 
 definePageMeta({
   middleware: ["guest-only"],
-  //layout: false,
+  // layout: false,
 });
 
 // const { login } = useAuth();
 
-
 const form = reactive({
   data: {
-    phone: "admin@gmail.com",
+    phone: "71111111111",
     password: "password",
     rememberMe: false,
   },
@@ -22,27 +19,27 @@ const form = reactive({
   pending: false,
 });
 
-//const isAdmin = useAdmin();
+// const isAdmin = useAdmin();
 
+const { authenticateUser } = useAuthStore(); // use auth store
 
+const { authenticated } = storeToRefs(useAuthStore()); // make authenticated state reactive
 
-const { authenticateUser } = useAuthStore() // use auth store
-
-const { authenticated } = storeToRefs(useAuthStore()) // make authenticated state reactive
-
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const user = ref({
-  username: 'kminchelle',
-  password: '0lelplR'
-})
-const router = useRouter()
+  username: "kminchelle",
+  password: "0lelplR",
+});
+const router = useRouter();
 
 const onLoginClick = async () => {
-  const result = await authenticateUser(form)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const result = await authenticateUser(form);
   // redirect to homepage if user is authenticated
   if (authenticated) {
-    router.push('/')
+    router.push("/");
   }
-}
+};
 
 // async function onLoginClick() {
 //   try {
@@ -55,7 +52,7 @@ const onLoginClick = async () => {
 //     await navigateTo(redirect);
 //   } catch (error: any) {
 //     console.error(error);
-//    
+//
 //     if (error.data.message) form.error = error.data.message;
 //   } finally {
 //     form.pending = false;
@@ -64,89 +61,112 @@ const onLoginClick = async () => {
 </script>
 
 <template>
-<div class="all ">
-  <div class="login">
-    <div class="login-img"><img src="/img/teacher.svg" alt=""></div>
-    <div class="login-wrapper">
-      
-      
-      <div class="form login-form">
-        <div class="login-form__title h2-title">Войти</div>
-        <div class="form-row">
-          <div class="c-md-1">
-            <div class="form-item">
-              <label for="" class="form-label">
-                <span class="text">Номер телефона</span>
-              </label>
-            </div>
-            <div class="form-input">
-              <InputMask id="basic" v-model="form.data.phone" mask="+7(999)999-99-99" placeholder="+7(999)999-99-99" />
-              <input v-model="form.data.phone" class="input" type="text">
-            </div>
-          </div><!--end c-md-1 -->
-        </div><!--end form-row -->
-        <div class="form-row">
-          <div class="c-md-1">
-            <div class="form-item">
-              <label for="" class="form-label">
-                <span class="text">Пароль</span>
-              </label>
-            </div>
-            <div class="form-input">
-              <input v-model="form.data.password" class="input" type="text">
-            </div>
-          </div><!--end c-md-1 -->
-        </div><!--end form-row -->
-        <div class="form-row">
-          <div class="c-md-1">
-            <div class="box-checkbox">
-              <Checkbox v-model="form.data.rememberMe" inputId="rememberPassword" value="rememberPassword"></Checkbox>
-              <label class="" for="rememberPassword">Запомнить меня на этом компьютере</label>
-            </div>
-            
-          </div><!--end c-md-1 -->
-        </div><!--end form-row -->
-        <div class="form-row">
-          <div class="c-md-1">
-            <div class="b-btn">
-              <button class="btn btn-login">Войти</button>
-            </div>
-          </div><!--end c-md-1 -->
-        </div><!--end form-row -->
-        <div class="form-row">
-          <div class="c-md-1">
-            <div class="login-links">
-              <NuxtLink to="/">
-                Зарегистрироваться
-              </NuxtLink>
-              <NuxtLink to="/">
-                Забыли пароль?
-              </NuxtLink>
-            </div>
-          </div><!--end c-md-1 -->
-        </div><!--end form-row -->
-        <div class="form-row">
-          <div class="c-md-1">
-            <div class="login__using">
-              <div class="login__using-title"></div>
-              <div class="login__using-btns">
-                <NuxtLink to="/" class="btn btn--border link-mos">
-                  <SvgIcon name="eye" class="ic32"></SvgIcon>
-                  <span class="btn-label">mos.ru</span>
-                </NuxtLink>
-                <NuxtLink to="/" class="btn btn--border link-myak">
-                  <SvgIcon name="eye" class="ic32"></SvgIcon>
-                </NuxtLink>
-                <span class="btn-label">Маяк</span>
+  <div class="all">
+    <div class="login">
+      <div class="login-img"><img src="/img/teacher.svg" alt="" /></div>
+      <div class="login-wrapper">
+        <form @submit.prevent="onLoginClick">
+          <p
+            v-if="form.error"
+            class="mb-3 px-3 py-1.5 w-full border rounded border-red-400 text-sm text-center text-red-400"
+          >
+            {{ form.error }}
+          </p>
+          <div class="form login-form">
+            <div class="login-form__title h2-title">Войти</div>
+            <div class="form-row">
+              <div class="c-md-1">
+                <div class="form-item">
+                  <label for="" class="form-label">
+                    <span class="text">Номер телефона</span>
+                  </label>
+                </div>
+                <div class="form-input">
+                  <InputMask
+                    id="basic"
+                    v-model="form.data.phone"
+                    mask="+7(999)999-99-99"
+                    placeholder="+7(999)999-99-99"
+                  />
+                </div>
               </div>
+              <!--end c-md-1 -->
             </div>
-          </div><!--end c-md-1 -->
-        </div><!--end form-row -->
-          
+            <!--end form-row -->
+            <div class="form-row">
+              <div class="c-md-1">
+                <div class="form-item">
+                  <label for="" class="form-label">
+                    <span class="text">Пароль</span>
+                  </label>
+                </div>
+                <div class="form-input">
+                  <Password v-model="form.data.password" toggle-mask :feedback="false" />
+                </div>
+              </div>
+              <!--end c-md-1 -->
+            </div>
+            <!--end form-row -->
+            <div class="form-row">
+              <div class="c-md-1">
+                <div class="box-checkbox">
+                  <Checkbox
+                    v-model="form.data.rememberMe"
+                    input-id="rememberPassword"
+                    value="rememberPassword"
+                  ></Checkbox>
+                  <label class="fwb" for="rememberPassword">Запомнить меня на этом компьютере</label>
+                </div>
+              </div>
+              <!--end c-md-1 -->
+            </div>
+            <!--end form-row -->
+            <div class="form-row pt16">
+              <div class="c-md-1">
+                <div class="b-btn">
+                  <button class="btn btn-login">Войти</button>
+                </div>
+              </div>
+              <!--end c-md-1 -->
+            </div>
+            <!--end form-row -->
+            <div class="form-row">
+              <div class="c-md-1">
+                <div class="login-links">
+                  <NuxtLink to="/"> Зарегистрироваться </NuxtLink>
+                  <NuxtLink to="/"> Забыли пароль? </NuxtLink>
+                </div>
+              </div>
+              <!--end c-md-1 -->
+            </div>
+            <!--end form-row -->
+            <div class="form-row">
+              <div class="c-md-1">
+                <div class="login__using">
+                  <div class="login__using-title">Или авторизоваться с помощью</div>
+                  <div class="login__using-btns">
+                    <NuxtLink to="/" class="btn btn--border link-mos">
+                      <SvgIcon name="ic-mos" class="ic32"></SvgIcon>
+                      <span class="btn-label">mos.ru</span>
+                    </NuxtLink>
+                    <NuxtLink to="/" class="btn btn--border link-myak">
+                      <SvgIcon name="ic-myak" class="ic32"></SvgIcon>
+                      <span class="btn-label">Маяк</span>
+                    </NuxtLink>
+                  </div>
+                </div>
+              </div>
+              <!--end c-md-1 -->
+            </div>
+            <!--end form-row -->
+          </div>
+        </form>
       </div>
-    </div><!--end login-wrapper -->
-  </div><!--end b-login-->
-</div><!--end all -->
+      <!--end login-wrapper -->
+    </div>
+    <!--end b-login-->
+  </div>
+  <!--end all -->
   <!-- div class="min-h-screen flex flex-col">
     <header>
       <h1 class="my-24 font-bold text-2xl text-center">Login to your account</h1>

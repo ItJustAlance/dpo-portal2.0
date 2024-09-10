@@ -23,30 +23,31 @@ export default defineNuxtConfig({
   vite: {
     plugins: [
       svgLoader({
-        svgoConfig: {
-          multipass: true,
-          plugins: [
-            {
-              name: "preset-default",
-              params: {
-                overrides: {
-                  // viewBox is required to resize SVGs with CSS.
-                  // @see https://github.com/svg/svgo/issues/1128
-                  removeViewBox: false,
-                },
-              },
-            },
-          ],
-        },
+        svgo: false,
+        // svgoConfig: {
+        //   multipass: true,
+        //   plugins: [
+        //     {
+        //       name: "preset-default",
+        //       params: {
+        //         overrides: {
+        //           // viewBox is required to resize SVGs with CSS.
+        //           // @see https://github.com/svg/svgo/issues/1128
+        //           removeViewBox: true,
+        //         },
+        //       },
+        //     },
+        //   ],
+        // },
       }),
     ],
     build: {
-      //sourcemap: 'inline'
+      // sourcemap: 'inline'
     },
     css: {
       preprocessorOptions: {
         scss: {
-          //additionalData: `@import "./src/scss/_app.scss";`
+          // additionalData: `@import "./src/scss/_app.scss";`
         },
       },
       devSourcemap: true, // this one
@@ -82,8 +83,8 @@ export default defineNuxtConfig({
       include: ["Checkbox", "Radio", "InputOtp"],
     },
     options: {
-      //ripple: true,
-      //unstyled: true,
+      // ripple: true,
+      // unstyled: true,
       theme: {
         preset: Aura,
         options: {
@@ -101,7 +102,7 @@ export default defineNuxtConfig({
     //     config.devtool = 'source-map'
     //   }
     // },
-    //extractCSS: true,
+    // extractCSS: true,
   },
 
   sourcemap: {

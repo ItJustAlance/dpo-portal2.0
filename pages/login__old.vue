@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { storeToRefs } from 'pinia'
-import { useAuthStore } from '/stores/auth'
+import { storeToRefs } from "pinia";
+import { useAuthStore } from "@/stores/auth";
 
 definePageMeta({
   middleware: ["guest-only"],
@@ -19,27 +19,27 @@ const form = reactive({
   pending: false,
 });
 
-//const isAdmin = useAdmin();
+// const isAdmin = useAdmin();
 
+const { authenticateUser } = useAuthStore(); // use auth store
 
+const { authenticated } = storeToRefs(useAuthStore()); // make authenticated state reactive
 
-const { authenticateUser } = useAuthStore() // use auth store
-
-const { authenticated } = storeToRefs(useAuthStore()) // make authenticated state reactive
-
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const user = ref({
-  username: 'kminchelle',
-  password: '0lelplR'
-})
-const router = useRouter()
+  username: "kminchelle",
+  password: "0lelplR",
+});
+const router = useRouter();
 
 const onLoginClick = async () => {
-  const result = await authenticateUser(form)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const result = await authenticateUser(form);
   // redirect to homepage if user is authenticated
   if (authenticated) {
-    router.push('/')
+    router.push("/");
   }
-}
+};
 
 // async function onLoginClick() {
 //   try {
@@ -52,7 +52,7 @@ const onLoginClick = async () => {
 //     await navigateTo(redirect);
 //   } catch (error: any) {
 //     console.error(error);
-//    
+//
 //     if (error.data.message) form.error = error.data.message;
 //   } finally {
 //     form.pending = false;

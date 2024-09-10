@@ -1,0 +1,59 @@
+.boxinfo
+  &-list
+  &-wrapper
+    background: $clrGrey20
+    padding: 32px
+    border-radius: 28px
+    position: relative
+    overflow: hidden
+    width: 100%
+  .title
+    padding-bottom: 28px
+    &-link
+      display: inline-flex
+      vertical-align: top
+      align-items: center
+      font-size: 28px
+      font-weight: 700
+      color: $clrGrey100
+      &:hover
+        color: $clrPrimaryMain
+      &__ic
+        margin-left: 8px
+        display: flex
+        align-items: center
+        .svg-icon
+          fill: none
+  &-img
+    text-align: right
+    top: 32px
+    right: -32px
+    position: relative
+  .curse-list
+    display: flex
+    gap: 12px
+    flex-wrap: wrap
+  .curse-item
+    display: inline-flex
+    vertical-align: top
+    &-wrapper
+      display: inline-flex
+      vertical-align: top
+    &__link
+      color: $clrGrey100
+      text-decoration: none
+      display: inline-flex
+      padding: 8px 24px
+      font-size: 18px
+      border-radius: 100px
+      border: 1px solid $clrGrey90
+      &:hover
+        background: $clrPrimaryMain
+        color: #fff
+        border-color: $clrPrimaryMain
+      &.tag-active
+        background: $clrPrimaryMain
+        color: #fff
+        font-weight: 700
+        font-size: 16px
+        border-color: $clrPrimaryMain

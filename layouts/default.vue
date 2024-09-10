@@ -1,9 +1,9 @@
 <template>
   <div class="over">
-    <Header />
-    <main>
+    <HeaderComp />
+    <div class="main">
       <slot />
-    </main>
+    </div>
     <Footer />
   </div>
 </template>

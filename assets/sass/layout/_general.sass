@@ -151,7 +151,9 @@ body
   max-width: 1180px
   padding: 0 10px
   margin: 0 auto
-
+.main
+  padding: 64px 0 200px
+  
 +r($sm)
   .container
     padding-left: 10px
@@ -164,7 +166,17 @@ body
   width: 100%
   min-height: 100vh
 
-  
+.b-container
+  display: flex
+  .aside
+    max-width: 280px
+    min-width: 280px
+    &+.content-body
+      margin-left: 20px
+  .content-body
+    flex: 1 1 auto
+    
+    
 // REMOVE FOR PRODUCTION !
 .dev-bp-debug
   background: black

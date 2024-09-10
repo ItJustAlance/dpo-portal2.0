@@ -1,0 +1,135 @@
+.search
+  &-box
+    &__search
+      position: relative
+      padding-bottom: 24px
+    &__tags
+    .list-search-tags
+      display: flex
+      gap: 12px
+      flex-wrap: wrap
+      .item-tag
+        display: inline-flex
+        vertical-align: top
+        &__link
+          color: $clrGrey100
+          text-decoration: none
+          display: inline-flex
+          align-items: center
+          padding: 8px 24px
+          font-size: 18px
+          border-radius: 100px
+          border: 1px solid $clrGrey90
+          &:hover
+            background: $clrPrimaryMain
+            color: #fff
+            border-color: $clrPrimaryMain
+          &.tag-active
+            background: $clrPrimaryMain
+            color: #fff
+            font-weight: 700
+            font-size: 16px
+            border-color: $clrPrimaryMain
+            padding-top: 10px
+            //padding-bottom: 12px
+
+          
+        
+  &-form
+    max-width: 660px
+    position: relative
+    &__input
+      border: 2px solid $clrPrimaryMain
+      border-radius: 100px
+      background: url(/img/magnifying-glass.svg) 16px 50% no-repeat
+      z-index: 1
+      position: relative
+    .search-clear
+      position: absolute
+      top: calc(50% - 12px)
+      right: 12px
+      cursor: pointer
+    &__result
+      display: none
+      position: absolute
+      top: calc(100% - 10px)
+      left: 3px
+      right: 3px
+      background: #fff
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0, .08)
+      border-radius: 0  0 24px 24px
+      &-wrapper
+        padding: 40px 15px
+  &-input
+    background: none
+    border: none
+    width: 100%
+    padding: 12px 12px 12px 56px
+  &-group
+    & + .search-group
+      margin-top: 24px
+    &__title
+      font-size: 16px
+      font-weight: 700
+      padding-bottom: 12px
+  &-list-tags
+    display: flex
+    gap: 12px
+    flex-wrap: wrap
+  &-tag-item 
+    display: inline-flex
+    &__del
+      margin-left: 8px
+      cursor: pointer
+      display: flex
+      align-items: center
+    .svg-icon
+      fill: none
+    &__wrap
+      padding: 2px 12px
+      font-size: 14px
+      border-radius: 100px
+      background: $clrGrey30
+      display: inline-flex
+      align-items: center
+    &.--blue
+      .search-tag-item__wrap
+        background: $clrPrimaryMain
+        color: #fff
+        font-weight: 700
+        font-size: 16px
+  &-list
+    &-box
+      display: flex
+      flex-direction: column
+      gap: 12px
+    &__item
+      display: flex
+      overflow: hidden
+      &-wrapper
+        display: flex
+        background: $clrGrey30
+        overflow: hidden
+        border-radius: 24px
+      .img
+        min-width: 100px
+        max-width: 100px
+        overflow: hidden
+      .right
+        flex: 1 1 auto
+        padding: 8px
+      .text
+        //padding-bottom: 12px
+      .bottom
+        padding-top: 12px
+      .small-label
+        display: inline-flex
+        vertical-align: top
+        &-list
+          display: flex
+          flex-wrap: wrap
+          gap: 32px
+        &__icon
+          margin-right: 8px
+          display: flex
+          align-items: center

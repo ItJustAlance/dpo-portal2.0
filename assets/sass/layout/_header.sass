@@ -1,17 +1,18 @@
 .header
   width: 100%
   position: relative
-  z-index: 1
+  z-index: 3
   padding: 27px 0
+  background: #fff
   .all
     display: flex
-    align-items: center
+    //align-items: center
   &__logo
     min-width: 40px
     margin-right: 24px
   &__nav
     display: flex
-    align-items: center
+    //align-items: center
     flex: 1 1 auto
     margin-right: 24px
     &-menu
@@ -20,21 +21,100 @@
       list-style: none
       font-weight: 700
       display: flex
-      align-items: center
+      //align-items: center
       justify-content: space-between
       flex: 1 1 auto
       .nav-menu-item
+        display: flex
+        align-items: center
+        padding-bottom: 27px
+        margin-bottom: -27px
+        a
+          &:hover
+            color: $clrPrimaryMain
+        &__submenu
+          &:hover
+            .submenu
+              display: block
         &__link
           display: block
-          position: relative
           padding: 8px 16px
           color: $clrGrey90
+          &.--arr
+            .svg-icon--menu-arr
+              fill: none
     .submenu
       display: none
+      z-index: 1
+      position: absolute
+      top: calc(100% - 2px)
+      left: 0
+      width: 100%
+      box-shadow: 0 9px 8px 0 rgba(0, 0, 0, 0.09)
+      background: #fff
+      border-radius: 0 0 32px 32px
+      overflow: auto
+      max-width: 100%
+      max-height: calc(100vh - 130px)
+      a
+        color: #000
+        &:hover
+          color: $clrPrimaryMain
+      &__wrapper
+        width: 100%
+      &__box
+      &__title
+        font-size: 12px
+        font-weight: 700
+        text-transform: uppercase
+        color: $clrPrimaryPressed
+        padding: 8px 0
+        border-bottom: 1px solid $clrPrimaryPressed
+      &__items
+        padding-top: 32px
+        margin: 0 -10px
+        display: flex
+        flex-wrap: wrap
+      &__item
+        min-width: 33.333%
+        max-width: 33.333%
+        padding: 0 10px 30px
+        font-size: 16px
+        color: $clrGrey70
+        font-weight: 400
+        &-up
+          display: flex
+          padding-bottom: 8px
+          background: url(/img/caret-right.svg) 100% 0 no-repeat
+        &-label
+          font-size: 20px
+          font-weight: 700
+          color: #000
+          padding-bottom: 8px
+          padding-top: 3px
+        &-bottom
+          padding-top: 4px
+          padding-right: 30px
+      &__icon
+        min-width: 32px
+        max-width: 32px
+        margin-right: 10px
+      .list-submenu3
+        margin: 0
+        padding: 0
+        list-style: none
+        li
+          display: block
+          font-weight: 700
+          & + li
+            margin-top: 12px
+  
   &__right
     display: flex
     margin-left: auto
     .b-links-logins
+      display: flex
+      align-items: center
       .btn
         &+.btn
           margin-left: 24px
@@ -46,3 +126,52 @@
         opacity: .8
       svg
         fill: none
+
+
+.auth-info
+  display: flex
+  align-items: center
+  position: relative
+  
+  &.show
+    .auth-info__dropdown
+      display: block
+  &-wrapper
+    display: flex
+    align-items: center
+    gap: 24px
+  &__label
+    overflow: hidden
+    white-space: nowrap
+    display: flex
+    align-items: center
+    gap: 8px
+    cursor: pointer
+  &__list
+    margin: 0 -16px
+    padding: 0
+    list-style: none
+    display: flex
+    flex-direction: column
+    li
+      padding: 12px 16px
+      border-top: 1px solid $clrGrey40
+  &__dropdown
+    display: none
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.10)
+    border-radius: 4px
+    background: #fff
+    padding: 16px 16px 4px
+    position: absolute
+    top: 100%
+    right: 0
+    z-index: 3
+    width: 230px
+    font-weight: 300
+    font-size: 14px
+    white-space: normal
+    .name
+      font-weight: 500
+      padding-bottom: 8px
+    .text
+      padding-bottom: 12px

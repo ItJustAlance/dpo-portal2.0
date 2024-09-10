@@ -1,17 +1,17 @@
-import { getUserByEmail } from "~~/server/models/user";
+import { getUserByPhone } from "~~/server/models/user";
 
 export default defineEventHandler(async (event) => {
-  const body = await readBody<{ email: string; password: string; rememberMe: boolean }>(event);
+  const body = await readBody<{ phone: string; password: string; rememberMe: boolean }>(event);
 
-  const { email, password, rememberMe } = body;
-  if (!email || !password) {
+  const { phone, password, rememberMe } = body;
+  if (!phone || !password) {
     throw createError({
       statusCode: 400,
-      message: "Email address and password are required",
+      message: "Phone address and password are required",
     });
   }
 
-  const userWithPassword = await getUserByEmail(email);
+  const userWithPassword = await getUserByPhone(phone);
   if (!userWithPassword) {
     throw createError({
       statusCode: 401,

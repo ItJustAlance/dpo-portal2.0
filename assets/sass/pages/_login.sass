@@ -10,9 +10,42 @@
     &__title
       text-align: center
       padding-bottom: 40px
-    .form-item
+    .form-input
+      .p-password
+        width: 100%
+        &-toggle-mask-icon
+          cursor: pointer
     .form-label
       font-weight: bold
+    .b-btn
+      .btn-login
+        width: 100%
   &-wrapper
     flex: 1 1 auto
-    
+  .fwb
+    font-weight: bold
+  &-links
+    font-weight: bold
+    display: flex
+    justify-content: space-between
+    a
+      color: $clrGrey90
+      &:hover
+        color: $clrPrimaryMain
+  &__using
+    padding-top: 32px
+    &-title
+      padding-bottom: 12px
+    &-btns
+      display: flex
+      justify-content: space-between
+      .link-mos
+        color: $clrSecondaryMain
+        border-color: $clrSecondaryBorder
+        &:hover
+          background: $clrSecondaryBorder
+      .link-myak
+        color: $clrWarningMain
+        border-color: $clrWarningBorder
+        &:hover
+          background: $clrWarningBorder

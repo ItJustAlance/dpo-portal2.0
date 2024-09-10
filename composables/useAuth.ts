@@ -11,11 +11,12 @@ export const useAuth = () => {
     cookie.value = cookie;
   };
 
-  const login = async (email: string, password: string, rememberMe: boolean) => {
+  const login = async (phone: string, password: string, rememberMe: boolean) => {
+    console.log("dddd");
     const data = await $fetch("/auth/login", {
       method: "POST",
       body: {
-        email,
+        phone,
         password,
         rememberMe,
       },
