@@ -21,5 +21,9 @@ module.exports = {
   ],
   rules: {
         'no-console': 'off',
+        'vue/html-comment-content-newline': ['error', {
+      singleline: 'never', // Отключает перенос на новую строку для однострочных комментариев
+      multiline: 'never',  // Отключает перенос на новую строку для многострочных комментариев
+    }],
     },
 };

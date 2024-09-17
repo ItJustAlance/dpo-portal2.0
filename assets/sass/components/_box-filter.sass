@@ -1,0 +1,52 @@
+.box-filter
+  & + .box-filter
+    margin-top: 48px
+  .title
+    font-size: 20px
+    font-weight: 700
+    color: #000
+    padding-bottom: 12px
+  .b-checkbox
+    label
+      font-weight: 700
+      color: $clrGrey90
+  .filter-list
+    .filter-item
+      &+.filter-item
+        margin-top: 12px
+
+  &__search
+    
+    .b-input
+      margin-bottom: 12px
+      &__input
+        border: 1px solid #D3D4DB
+        border-radius: 24px
+        background: url(/img/magnifying-glass.svg) 12px 50% no-repeat
+        background-size: 16px auto
+        color: #797E8B
+        font-size: 18px
+        font-weight: 400
+        padding: 10px 10px 10px 32px
+
+  .btn-toggle
+    padding-left: 0
+
+  .filter-slider
+    margin-top: 24px
+    .title-inp
+      font-weight: 700
+    .slider__slider
+      height: 18px
+      padding: 0 6px
+  .filter-row
+    display: flex
+    margin: 0 -10px
+    .filter-col1
+      padding: 0 10px
+      min-width: 100%
+      max-width: 100%
+    .filter-col2
+      padding: 0 10px
+      min-width: 50%
+      max-width: 50%

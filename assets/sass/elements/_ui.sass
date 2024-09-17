@@ -308,3 +308,61 @@
 .p-carousel-next-button, .p-carousel-prev-button
   width: 48px
   height: 48px
+
+
+.over
+  .p-breadcrumb
+    padding: 0 0 48px
+    color: $clrGrey70
+    font-size: 18px
+    .f-700
+      font-weight: bold
+    &-item-link
+      color: $clrGrey90
+      font-weight: 700
+    &-separator
+      font-weight: 700
+      color: $clrGrey90
+  .p-select
+    background: #fff
+    border: 1px solid $clrGrey40
+    border-radius: 24px
+    &-label
+      padding: 10px 0 10px 10px
+      color: $clrGrey70
+      font-size: 18px
+    &.select-filter-sort
+      background: url(/img/arrows-down-up.svg) 12px 50% no-repeat
+      
+      padding-left: 32px
+  .p-slider
+    background: #D3D4DB
+    position: relative
+    &.p-slider-horizontal
+      height: 2px
+      &:before, &:after
+        width: 6px
+        height: 6px
+        border-radius: 50%
+        content: ""
+        position: absolute
+        top: -2px
+        display: block
+        background: #D3D4DB
+        left: -5px
+      &:after
+        right: -5px
+        left: auto
+    &-range
+      background: $clrPrimaryMain
+    &-handle
+      background: $clrPrimaryMain
+      width: 18px
+      height: 18px
+      z-index: 1
+      &:hover
+        background: $clrPrimaryMain
+        &:before
+          background: $clrPrimaryMain !important
+      &:before
+        background: $clrPrimaryMain

@@ -4,7 +4,7 @@ import { ref } from "vue";
 // const currentUser = useAuthUser();
 
 const filterData = ref([]);
-const sliderValue = ref({ from: null, to: null });
+const sliderValue = ref([20, 40]);
 
 const selectedCity = ref();
 const cities = ref([
@@ -71,7 +71,7 @@ const cities = ref([
               </div>
               <!--end filter-list-->
               <div class="row-toggle">
-                <button class="btn btn--inline">
+                <button class="btn btn--inline btn-toggle">
                   <span class="btn-label">Еще 47 направлений</span>
                   <SvgIcon name="caret-circle-down" class="fnone ic24"></SvgIcon>
                 </button>
@@ -111,16 +111,20 @@ const cities = ref([
             <!--end filter-list-->
             <div class="filter-slider">
               <div class="filter-row">
-                <div class="filter-col1"><Slider v-model="sliderValue" /></div>
+                <div class="filter-col1">
+                  <div class="slider__slider">
+                    <Slider v-model="sliderValue" :min="0" :max="250" range />
+                  </div>
+                </div>
               </div>
               <div class="filter-row">
                 <div class="filter-col2">
                   <div class="title-inp">От</div>
-                  <InputText v-model.number="sliderValue.from" />
+                  <InputText v-model.number="sliderValue[0]" />
                 </div>
                 <div class="filter-col2">
                   <div class="title-inp">До</div>
-                  <InputText v-model.number="sliderValue.to" />
+                  <InputText v-model.number="sliderValue[1]" />
                 </div>
               </div>
             </div>
@@ -216,7 +220,7 @@ const cities = ref([
               </div>
               <!--end filter-list-->
               <div class="row-toggle">
-                <button class="btn btn--inline">
+                <button class="btn btn--inline btn-toggle">
                   <span class="btn-label">Еще 47 направлений</span>
                   <SvgIcon name="caret-circle-down" class="fnone ic24"></SvgIcon>
                 </button>
@@ -232,123 +236,44 @@ const cities = ref([
         </div>
       </aside>
       <main class="content-body">
-        <div class="search-box">
-          <div class="search-box__search">
-            <div class="search-form">
-              <div class="search-form__input">
-                <input
-                  type="text"
-                  placeholder="Название курса, шифр, направление, специальность"
-                  class="search-input"
-                />
-                <div class="search-clear">
-                  <SvgIcon name="xcircle" class="fnone ic24"></SvgIcon>
+        <section class="section">
+          <SearchBox :is-more="true" title-tags="Специальность" :is-special="true" />
+        </section>
+        <section class="section">
+          <div class="search-no-result">
+            <div class="img">
+              <img src="/img/file_searching.svg" alt="" />
+            </div>
+            <div class="text h5-title">По вашим параметрам поиска курсов не найдено. Попробуйте изменить фильтры</div>
+          </div>
+        </section>
+        <section class="section">
+          <ul class="search-list-tags">
+            <li class="search-tag-item">
+              <div class="search-tag-item__wrap">
+                <div class="search-tag-item__title">Воспитатель</div>
+                <div class="search-tag-item__del"><SvgIcon name="xcircle" class="ic12"></SvgIcon></div>
+              </div>
+            </li>
+            <li class="search-tag-item">
+              <div class="search-tag-item__wrap">
+                <div class="search-tag-item__title">Воспитатель</div>
+                <div class="search-tag-item__del">
+                  <SvgIcon name="xcircle" class="fill-none ic12"></SvgIcon>
                 </div>
               </div>
-              <div class="search-form__result">
-                <div class="search-form__result-wrapper">
-                  <div class="search-group">
-                    <div class="search-group__title">Недавние запросы</div>
-                    <div class="search-group__body">
-                      <ul class="search-list-tags">
-                        <li class="search-tag-item">
-                          <div class="search-tag-item__wrap">
-                            <div class="search-tag-item__title">Воспитатель</div>
-                            <div class="search-tag-item__del"><SvgIcon name="xcircle" class="ic12"></SvgIcon></div>
-                          </div>
-                        </li>
-                        <li class="search-tag-item">
-                          <div class="search-tag-item__wrap">
-                            <div class="search-tag-item__title">Воспитатель</div>
-                            <div class="search-tag-item__del">
-                              <SvgIcon name="xcircle" class="fill-none ic12"></SvgIcon>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <!--end search-group -->
-                  <div class="search-group">
-                    <div class="search-group__title">Популярные курсы</div>
-                    <div class="search-group__body">
-                      <ul class="search-list-box">
-                        <li class="search-list__item">
-                          <div class="search-list__item-wrapper">
-                            <div class="img"><img src="/img/img.png" alt="" /></div>
-                            <div class="right">
-                              <div class="text">
-                                Организация деятельности учащихся, ориентированная на обеспечение информационной
-                                безопасности в сети интернет
-                              </div>
-                              <div class="bottom">
-                                <div class="small-label-list">
-                                  <div class="small-label">
-                                    <div class="small-label__icon">
-                                      <SvgIcon name="barcode" class="fnone ic12"></SvgIcon>
-                                    </div>
-
-                                    <div class="small-label__title">04868-22/23-Б-ЗД</div>
-                                  </div>
-                                  <div class="small-label">
-                                    <div class="small-label__icon">
-                                      <SvgIcon name="ic-tag" class="fnone ic12"></SvgIcon>
-                                    </div>
-
-                                    <div class="small-label__title">6 450 ₽</div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <!--end search-group -->
-                </div>
-                <!--end search-form__result-wrapper -->
-              </div>
-              <!--end search-form__result -->
-            </div>
-            <!--end search-form -->
+            </li>
+          </ul>
+        </section>
+        <section class="section">
+          <div class="b-row-center --align-center">
+            <button class="btn btn--second">
+              <span class="btn-label">Сбросить все фильтры</span>
+              <SvgIcon name="xcircle" class="fnone ic24"></SvgIcon>
+            </button>
           </div>
-          <div class="search-box__tags">
-            <div class="title">Специальность</div>
-            <ul class="list-search-tags">
-              <li class="item-tag">
-                <NuxtLink class="item-tag__link" to="/">Воспитательная работа</NuxtLink>
-              </li>
-              <li class="item-tag">
-                <NuxtLink class="item-tag__link" to="/">Государственная итоговая аттестация (9-11 кл)</NuxtLink>
-              </li>
-              <li class="item-tag">
-                <NuxtLink class="item-tag__link" to="/">Дошкольное образование</NuxtLink>
-              </li>
-              <li class="item-tag">
-                <NuxtLink class="item-tag__link" to="/"
-                  >Дополнительное образование и внеурочная деятельность детей</NuxtLink
-                >
-              </li>
-              <li class="item-tag">
-                <NuxtLink class="item-tag__link" to="/">Духовно-нравственное воспитание, ОРКСЭ</NuxtLink>
-              </li>
-              <li class="item-tag last-item">
-                <NuxtLink class="item-tag__link" to="/">Духовно-нравственное воспитание, ОРКСЭ</NuxtLink>
-              </li>
-              <li class="item-tag last-item">
-                <NuxtLink class="item-tag__link tag-active" to="/">Все направления</NuxtLink>
-              </li>
-            </ul>
-            <div class="search-box__tags-row">
-              <button class="btn btn--border">
-                <span class="btn-label">Еще 65 специальностей</span>
-                <SvgIcon name="caret-circle-down" class="fnone ic24"></SvgIcon>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!--end search-box-->
+        </section>
+
         <div class="result-content">
           <div class="result-content__header">
             <div class="result-filters">
@@ -358,8 +283,13 @@ const cities = ref([
                   :options="cities"
                   option-label="name"
                   placeholder="Select a City"
-                  class="w-full md:w-56"
-                />
+                  class="select-filter-sort"
+                >
+                  <template #dropdownicon>
+                    <!-- Используем любую иконку, например, FontAwesome -->
+                    <SvgIcon name="caret-down" class="fnone ic24"></SvgIcon>
+                  </template>
+                </Select>
               </div>
               <!--end result-filter__item -->
             </div>
@@ -367,128 +297,16 @@ const cities = ref([
           </div>
           <div class="result-content__body">
             <div class="popular-list">
-              <div class="popular-item">
-                <div class="popular-item-wrapper">
-                  <div class="popular-item__header">
-                    <div class="img"><img src="/img/populare1.png" alt="" /></div>
-                    <div class="right">
-                      <ul class="info-list">
-                        <li>
-                          <div class="mini-info">
-                            <div class="mini-info__ico">
-                              <SvgIcon name="ic-clock" class="fnone ic16"></SvgIcon>
-                            </div>
-                            <div class="mini-info__text">32 часа</div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="mini-info">
-                            <div class="mini-info__ico"><SvgIcon name="ic-tag" class="fnone ic16"></SvgIcon></div>
-                            <div class="mini-info__text">6 450 ₽</div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="mini-info">
-                            <div class="mini-info__ico"><SvgIcon name="ic-monitor" class="fnone ic16"></SvgIcon></div>
-                            <div class="mini-info__text">Очно-заочная с ДОТ</div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="mini-info">
-                            <div class="mini-info__ico">
-                              <SvgIcon name="ic-calendar-check" class="fnone ic16"></SvgIcon>
-                            </div>
-                            <div class="mini-info__text">Старт: 1 сентября</div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <!--end popular-item__header -->
-                  <div class="popular-item__content">
-                    <div class="small-label">
-                      <div class="small-label__icon">
-                        <SvgIcon name="barcode" class="fnone ic16"></SvgIcon>
-                      </div>
-                      04868-22/23-Б-ЗД
-                    </div>
-                    <div class="title">
-                      <NuxtLink class="link-link" to="/">
-                        Организация деятельности учащихся, ориентированная на обеспечение информационной безопасности в
-                        сети интернет
-                      </NuxtLink>
-                    </div>
-                    <div class="text">
-                      <NuxtLink class="link-link" to="/"
-                        >Дополнительное образование и внеурочная деятельность детей</NuxtLink
-                      >
-                    </div>
-                  </div>
-                  <!--end popular-item__content -->
-                </div>
-              </div>
-              <div class="popular-item">
-                <div class="popular-item-wrapper">
-                  <div class="popular-item__header">
-                    <div class="img"><img src="/img/popuelare2.png" alt="" /></div>
-                    <div class="right">
-                      <ul class="info-list">
-                        <li>
-                          <div class="mini-info">
-                            <div class="mini-info__ico">
-                              <SvgIcon name="ic-clock" class="fnone ic16"></SvgIcon>
-                            </div>
-                            <div class="mini-info__text">32 часа</div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="mini-info">
-                            <div class="mini-info__ico"><SvgIcon name="ic-tag" class="fnone ic16"></SvgIcon></div>
-                            <div class="mini-info__text">6 450 ₽</div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="mini-info">
-                            <div class="mini-info__ico"><SvgIcon name="ic-monitor" class="fnone ic16"></SvgIcon></div>
-                            <div class="mini-info__text">Очно-заочная с ДОТ</div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="mini-info">
-                            <div class="mini-info__ico">
-                              <SvgIcon name="ic-calendar-check" class="fnone ic16"></SvgIcon>
-                            </div>
-                            <div class="mini-info__text">Старт: 1 сентября</div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <!--end popular-item__header -->
-                  <div class="popular-item__content">
-                    <div class="small-label">
-                      <div class="small-label__icon">
-                        <SvgIcon name="barcode" class="fnone ic16"></SvgIcon>
-                      </div>
-                      04868-22/23-Б-ЗД
-                    </div>
-                    <div class="title">
-                      <NuxtLink class="link-link" to="/">
-                        Организация деятельности учащихся, ориентированная на обеспечение информационной безопасности в
-                        сети интернет
-                      </NuxtLink>
-                    </div>
-                    <div class="text">
-                      <NuxtLink class="link-link" to="/"
-                        >Дополнительное образование и внеурочная деятельность детей</NuxtLink
-                      >
-                    </div>
-                  </div>
-                  <!--end popular-item__content -->
-                </div>
-              </div>
+              <CourseBox />
+              <CourseBox />
             </div>
             <!--end populars-list -->
+            <div class="more-load --align-center">
+              <button class="btn btn--second">
+                <span class="btn-label">Еще 10 курсов из 150</span>
+                <SvgIcon name="caret-circle-down" class="fnone ic24"></SvgIcon>
+              </button>
+            </div>
           </div>
         </div>
         <!--end result-content -->

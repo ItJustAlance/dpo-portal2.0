@@ -37,7 +37,7 @@ button
   +r($lg)
     padding: 11rem 10rem
   .btn-label + .svg-icon
-    margin-left: 10px
+    margin: -10px 0 -10px 10px
   .svg-icon
     //fill: currentColor
     & + .btn-label
@@ -51,7 +51,6 @@ button
     background: $clrPrimaryHover
     color: #fff
     border-color: $clrPrimaryHover
-  
   
   &--second
     color: $clrPrimaryMain
@@ -80,6 +79,14 @@ button
     border-color: $clrPrimaryBorder
     color: $clrPrimaryMain
     background: #fff
+    &:hover
+      color: $clrPrimaryHover
+      background: #fff
+      border-color: $clrPrimaryHover
+  &--border-inline
+    border-color: $clrPrimaryBorder
+    color: $clrPrimaryMain
+    background: none
     &:hover
       color: $clrPrimaryHover
       background: #fff
