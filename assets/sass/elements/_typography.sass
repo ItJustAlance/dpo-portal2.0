@@ -3,11 +3,22 @@
   font-size: 64px
   font-weight: 700
   line-height: 1
+  +r($xl)
+    font-size: 52px
+  +r($lg)
+    font-size: 48px
+  +r($xss)
+    font-size: 42px
   //letter-spacing: em(-1.22, 72)
 
 .h2-title
   font-size: 48px
   font-weight: 700
+  line-height: 1.2
+  +r($xl)
+    font-size: 42px
+  +r($lg)
+    font-size: 36px
 
 .h3-title
   font-size: 36px
@@ -28,8 +39,8 @@
 .p-main
   margin: 0
 
-p + p
-  margin-top: 1em
+p + p, ol + p, p + ol, ul + p, p + ul
+  margin-top: 16px
 
 
 +r($lg)
@@ -60,3 +71,12 @@ p + p
 // color modifiers
 .c-red
   color: $colorRed
+
+ol
+  margin-left: 45px
+  li
+    & + li
+      margin-top: 16px
+      
+.article
+  font-size: 18px

@@ -44,15 +44,13 @@
           </div>
           04868-22/23-Б-ЗД
         </div>
-        <div class="title">
-          <NuxtLink class="link-link" to="/">
+        <NuxtLink class="popular-item__bottom-link" :to="{ name: 'course' }">
+          <span class="title">
             Организация деятельности учащихся, ориентированная на обеспечение информационной безопасности в сети
             интернет
-          </NuxtLink>
-        </div>
-        <div class="text">
-          <NuxtLink class="link-link" to="/">Дополнительное образование и внеурочная деятельность детей</NuxtLink>
-        </div>
+          </span>
+          <span class="text"> Дополнительное образование и внеурочная деятельность детей </span>
+        </NuxtLink>
       </div>
       <!--end popular-item__content -->
     </div>

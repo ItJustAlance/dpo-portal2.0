@@ -7,17 +7,8 @@
     position: relative
     overflow: hidden
     width: 100%
-    +r($sm)
-      padding: 16px
-      display: flex
-      flex-direction: column
   .title
     padding-bottom: 28px
-    +r($sm)
-      padding-bottom: 0
-      text-align: center
-      order: 1
-      margin-top: 0
     &-link
       display: inline-flex
       vertical-align: top
@@ -38,21 +29,10 @@
     top: 32px
     right: -32px
     position: relative
-    +r($sm)
-      top: 0
-      right: 0
-      text-align: center
-      order: 0
-      margin-bottom: 64px
-    +r($xss)
-      img
-        max-width: 120px
   .curse-list
     display: flex
     gap: 12px
     flex-wrap: wrap
-    +r($sm)
-      display: none
   .curse-item
     display: inline-flex
     vertical-align: top

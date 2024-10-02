@@ -5,8 +5,17 @@ const sliderMain = reactive({
   data: [
     { id: 1, url: "/img/banner.png" },
     { id: 2, url: "/img/banner.png" },
+    { id: 3, url: "/img/banner.png" },
+    { id: 4, url: "/img/banner.png" },
   ],
 });
+
+const totalSlides = computed(() => sliderMain.data?.length || 0);
+const currentSlide = ref(1);
+
+function onCurrentSlide(event) {
+  currentSlide.value = +event + 1;
+}
 </script>
 
 <template>
@@ -20,6 +29,7 @@ const sliderMain = reactive({
               Дополнительное профессиональное образование педагогических работников города Москвы
             </div>
           </div>
+          <div class="lvl1-img --mobile"><img src="/img/studying.svg" alt="" /></div>
           <SearchBox class="--main" />
         </div>
         <!--end lvl1-content -->
@@ -110,19 +120,31 @@ const sliderMain = reactive({
     <!--end lvl2 -->
     <div class="lvl3">
       <div class="all">
-        <Carousel class="slider-big" :value="sliderMain.data" :num-visible="1" :num-scroll="1" :show-indicators="false">
-          <template #item="slotProps">
-            <div class="banner-big">
-              <img :src="slotProps.data.url" :alt="slotProps.data.id" class="w-full rounded" />
-            </div>
-          </template>
-          <template #previcon>
-            <SvgIcon name="ic-arrow-circle-left" class="fnone ic48"></SvgIcon>
-          </template>
-          <template #nexticon>
-            <SvgIcon name="ic-arrow-circle-right" class="fnone ic48"></SvgIcon>
-          </template>
-        </Carousel>
+        <div class="slider-big-wrapper">
+          <Carousel
+            class="slider-big"
+            :value="sliderMain.data"
+            :num-visible="1"
+            :num-scroll="1"
+            :show-indicators="false"
+            @update:page="onCurrentSlide"
+          >
+            <template #item="slotProps">
+              <div class="banner-big">
+                <img :src="slotProps.data.url" :alt="slotProps.data.id" class="w-full rounded" />
+              </div>
+            </template>
+            <template #previcon>
+              <SvgIcon name="ic-arrow-circle-left" class="fnone ic48"></SvgIcon>
+            </template>
+            <template #nexticon>
+              <SvgIcon name="ic-arrow-circle-right" class="fnone ic48"></SvgIcon>
+            </template>
+          </Carousel>
+          <div class="indicator">
+            <strong>{{ currentSlide }}</strong> / {{ totalSlides }}
+          </div>
+        </div>
       </div>
       <!--end all-->
     </div>
@@ -134,6 +156,14 @@ const sliderMain = reactive({
           <CourseBox />
           <CourseBox />
         </div>
+        <section class="section">
+          <div class="visible-md b-row-center --align-center">
+            <button class="btn btn--second btn--md-full">
+              <span class="btn-label">Все курсы</span>
+              <SvgIcon name="ic-arrow-circle-right" class="fnone ic24"></SvgIcon>
+            </button>
+          </div>
+        </section>
       </div>
       <!--end all-->
     </div>

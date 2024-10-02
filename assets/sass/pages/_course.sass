@@ -12,3 +12,123 @@
     
 .b-row-center
   text-align: center
+
+  
+.course-info
+  &-header
+    display: flex
+    &__content
+      min-width: 600px
+      max-width: 600px
+    &__img
+      flex: 1 1 auto
+      display: flex
+      align-items: flex-end
+    .h2-title
+      padding-bottom: 64px
+  
+  &__art
+    color: $clrGrey70
+    padding-bottom: 2px
+    display: flex
+    align-items: center
+    .svg-icon
+      margin-right: 8px
+      
+  &__about
+    display: flex
+    gap: 40px
+    .b-item
+      flex: 1 1 100%
+      .b-label
+        color: $clrGrey70
+        margin-bottom: 12px
+        font-weight: 400
+        font-size: 14px
+        padding: 8px 0
+        border-bottom: 1px solid $clrGrey40
+      .b-text
+        color: $clrPrimaryMain
+
+        
+.course-nav
+  &-box
+    display: flex
+  &__text
+    min-width: 600px
+    max-width: 600px
+  &__menu
+    flex: 1 1 auto
+    max-width: 465px
+    margin-left: auto
+    padding-left: 40px
+  &__menu
+    .title
+      color: $clrGrey100
+      font-size: 20px
+      font-weight: 700
+      padding-bottom: 24px
+    &-box
+      & + .course-nav__menu-box
+        margin-top: 64px
+  
+  &__list
+    &-item
+      font-size: 18px
+      & + .course-nav__list-item
+        margin-top: 12px
+      &-wrap
+        color: $clrGrey100
+        border: 1px solid $clrGrey100
+        padding: 8px 24px
+        display: inline-flex
+        vertical-align: top
+        border-radius: 100px
+        // &:hover
+          color: $clrPrimaryMain
+          border-color: $clrPrimaryMain
+
+
+.section-title
+  padding-bottom: 48px
+
+  
+.slide-teach
+  text-align: center
+  .img
+    height: 120px
+    margin-bottom: 8px
+  .title
+    font-size: 16px
+    font-weight: 700
+    color: $clrGrey100
+    padding-top: 8px
+  .text
+    padding-top: 8px
+    font-size: 16px
+    color: $clrGrey50
+
+    
+.course-program-list
+  display: flex
+  flex-wrap: wrap
+  .b-item
+    display: flex
+    min-width: 50%
+    max-width: 50%
+    padding: 24px
+    &__wrapper
+      width: 100%
+      display: flex
+    .num
+      min-width: 90px
+      max-width: 90px
+      color: $clrPrimaryMain
+      font-size: 48px
+      font-weight: 700
+      line-height: 1
+    .text
+      flex: 1 1 auto
+      color: $clrGrey100
+      font-size: 20px
+      padding-top: 4px

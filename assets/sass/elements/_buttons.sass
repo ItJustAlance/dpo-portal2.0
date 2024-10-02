@@ -33,9 +33,10 @@ button
   font-weight: 700
   border: 1px solid $clrPrimaryMain
   +r($xl)
-    padding: 7rem 10rem
-  +r($lg)
-    padding: 11rem 10rem
+    padding: 12px 16px
+  +r($xss)
+    padding: 12px
+  
   .btn-label + .svg-icon
     margin: -10px 0 -10px 10px
   .svg-icon
@@ -43,7 +44,7 @@ button
     & + .btn-label
       margin-left: 4px
       +r($lg)
-        margin-right: 4rem
+        margin-right: 4px
     
   &:focus, &:active
     outline: none
@@ -51,6 +52,8 @@ button
     background: $clrPrimaryHover
     color: #fff
     border-color: $clrPrimaryHover
+  & + .btn
+    margin-left: 16px
   
   &--second
     color: $clrPrimaryMain
@@ -120,14 +123,16 @@ button
     &:hover
       color: #fff
       background: $clrWarningHover
-  
+  &--md-full
+    +r($md)
+    width: 100%
 .link-box
   display: inline-flex
   align-items: center
   .svg-icon
     margin-right: 8px
     +r($lg)
-      margin-right: 8rem
+      margin-right: 8px
 
 
 .link-link

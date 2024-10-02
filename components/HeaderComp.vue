@@ -8,6 +8,27 @@ const form = reactive({
   pending: false,
 });
 
+const isMenuOpen = ref(false);
+
+function onMenu() {
+  isMenuOpen.value = !isMenuOpen.value;
+  isLkOpen.value = false;
+  document.body.classList.toggle("lock", isMenuOpen.value);
+}
+
+const isLkOpen = ref(false);
+
+function onLk() {
+  isLkOpen.value = !isLkOpen.value;
+  isMenuOpen.value = false;
+  document.body.classList.toggle("lock", isLkOpen.value);
+}
+function onClose() {
+  isLkOpen.value = false;
+  isMenuOpen.value = false;
+  document.body.classList.toggle("lock", false);
+}
+
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function onLogoutClick() {
   try {
@@ -25,17 +46,27 @@ async function onLogoutClick() {
 </script>
 
 <template>
-  <header class="header">
+  <header class="header" :class="{ '--lk-open': isLkOpen, '--menu-open': isMenuOpen }">
     <div class="all">
+      <div class="header__lk">
+        <div class="header__lk-ico" @click="onLk">
+          <SvgIcon name="user" class="ic42 fnone"></SvgIcon>
+        </div>
+      </div>
+      <!--end header__lk -->
       <div class="header__logo">
         <NuxtLink to="/" class="logo-link">
-          <img src="/img/logo.svg" alt="" />
+          <img src="/img/logo-new.svg" alt="" />
         </NuxtLink>
       </div>
       <nav class="header__nav">
+        <div class="header__nav-ico">
+          <SvgIcon v-show="!(isMenuOpen || isLkOpen)" name="ic-menu" class="ic42" @click="onMenu"></SvgIcon>
+          <SvgIcon v-show="isMenuOpen || isLkOpen" name="menu-close" class="ic42" @click="onClose"></SvgIcon>
+        </div>
         <ul class="header__nav-menu">
           <li class="nav-menu-item">
-            <NuxtLink to="/" class="nav-menu-item__link"> Курсы </NuxtLink>
+            <NuxtLink :to="{ name: 'courses' }" class="nav-menu-item__link"> Курсы </NuxtLink>
           </li>
           <li class="nav-menu-item">
             <NuxtLink to="/" class="nav-menu-item__link"> Мероприятия </NuxtLink>
@@ -222,5 +253,7 @@ async function onLogoutClick() {
     </div -->
     </div>
     <!--end all -->
+    <HeaderMenuMobile :class="{ open: isMenuOpen }" />
+    <HeaderLkMobile :class="{ open: isLkOpen }" />
   </header>
 </template>

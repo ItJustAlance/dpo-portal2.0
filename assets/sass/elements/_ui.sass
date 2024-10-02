@@ -1,38 +1,47 @@
 .pt16
   padding-top: 16px
 
+.visible-md
+  display: none
+  +r($md)
+    display: block
 .box-info-banner
   border: 1px solid $clrPrimaryBorder
   padding: 32px
   border-radius: 32px
   display: flex
   align-items: center
+  +r($md)
+    flex-wrap: wrap
+  &__header
+    display: flex
+    +r($md)
+      margin-bottom: 40px
   .img
     min-width: 75px
     max-width: 75px
     margin-right: 46px
+    +r($md)
+      min-width: 46px
+      max-width: 46px
+      margin-right: 12px
   .b-text
     font-weight: 700
     color: #fff
     flex: 1 1 auto
+    display: flex
+    align-items: center
     padding-right: 42px
+    +r($md)
+      padding: 0
   .b-right
     margin-left: auto
-  
-    
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+    +r($md)
+      margin-left: 0
+      width: 100%
+      text-align: center
+
+
 .badge-status
   color: #000
   font-size: 12px
@@ -180,15 +189,15 @@
 .p-dropdown-panel .p-dropdown-items
   padding: 4px 0
   +r($lg)
-    padding: 4rem 0
+    padding: 4px 0
   .p-dropdown-item
     display: block !important
     padding: 5px 16px
     font-size: 14px
     font-family: $baseFont
     +r($lg)
-      padding: 5rem 16rem
-      font-size: 14rem
+      padding: 5px 16px
+      font-size: 14px
     &.p-highlight
       background: $clrGrey20
       color: $clrGrey90
@@ -315,6 +324,13 @@
     padding: 0 0 48px
     color: $clrGrey70
     font-size: 18px
+    margin: 0
+    &-list
+      margin: 0
+      padding: 0
+      li + li
+        margin: 0
+        padding: 0
     .f-700
       font-weight: bold
     &-item-link
