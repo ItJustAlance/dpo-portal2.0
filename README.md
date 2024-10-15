@@ -10,6 +10,8 @@ Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 - 📝 Guest, private, admin pages
 - 🔥 Active session on page reload
 
+отключить prettierrc
+
 ## Setup
 
 Make sure to install the dependencies:

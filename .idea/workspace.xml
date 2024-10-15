@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0fbb4658-f32c-45e0-aff1-e2cb3ccfe61f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/bookmarks.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/buildings.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/calendar-blank.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/check-circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/download-simple.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/faders-horizontal.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/file-doc.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/file-pdf.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/link.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/star.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/x-circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/sass/components/_event-box.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/sass/components/_news.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/sass/components/_program.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/sass/components/_subject.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/sass/pages/_event.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/sass/pages/_subject.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/event/EventBox.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/filter/FilterComp.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/filter/FilterMobile.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/filter/FilterMobileFull.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/news/NewsBox.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/program/ProgramBox.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/search/SearchNews.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/subject/SubjectBox.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/composables/useFilters.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/events/[event].vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/events/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/news/[news].vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/news/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/programs/[program].vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/programs/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/subjects/[subject].vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/subjects/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/ava.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/big-event.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/browsing.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/calendarCheck.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/course-img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/download-simple.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/email.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/event1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/kv1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/license.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/license2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/mapPin.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/org-img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/phone.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/pm1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/pm2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/program-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/raiting.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/star.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/star2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/subj-img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/users.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/ya_favicon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/api/filters/index.post.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/models/filters.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/routes/api/filters.post.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stores/filters.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dpop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dpop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sasslintPlugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/scssLintPlugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/components/_box-filter.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/components/_box-filter.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/components/_box-info.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/components/_box-info.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/components/_components.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/components/_components.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/components/_course.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/components/_course.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/components/_search-box.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/components/_search-box.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/elements/_buttons.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/elements/_buttons.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/elements/_icons.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/elements/_icons.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/elements/_typography.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/elements/_typography.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/elements/_ui.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/elements/_ui.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/layout/_general.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/layout/_general.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/layout/_header.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/layout/_header.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/pages/_course.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/pages/_course.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/pages/_main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/pages/_main.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/pages/_pages.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/pages/_pages.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/utilities/_variables.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/utilities/_variables.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/arr-left.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/arr-left.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/barcode.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/barcode.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/calendar-check.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/calendar-check.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/caret-circle-down.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/caret-circle-down.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/caret-down.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/caret-down.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/chat-circle.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/chat-circle.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/chevron-down.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/chevron-down.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/eye.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/eye.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/favorite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/favorite.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/filter.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/filter.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/heart.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/heart.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/i-fav.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/i-fav.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/ic-agnifying-glass.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/ic-agnifying-glass.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/ic-arrow-circle-left.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/ic-arrow-circle-left.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/ic-arrow-circle-right.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/ic-arrow-circle-right.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/ic-calendar-check.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/ic-calendar-check.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/ic-clock.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/ic-clock.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/ic-menu.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/ic-menu.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/ic-monitor.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/ic-monitor.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/ic-mos.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/ic-mos.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/ic-myak.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/ic-myak.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/ic-support.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/ic-support.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/ic-tag.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/ic-tag.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/menu-arr.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/menu-arr.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/menu-close.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/menu-close.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/monitor.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/monitor.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/sign-out.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/sign-out.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/user.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/user.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/xcircle.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/xcircle.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/svg/xmark.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/xmark.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/FilterComp.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/FilterGroup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/filter/FilterGroup.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SearchBox.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/search/SearchBox.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SvgIcon.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/SvgIcon.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/course/CourseBox.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/course/CourseBox.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/course.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses/[course].vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stores/counter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/stores/counter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2n1tAZcksGrlx8x5faQcNYwz4b9" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.tslint&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;F:\\mail\\sites\\2024\\dpop\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\mail\sites\2024\dpop\pages\courses" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0fbb4658-f32c-45e0-aff1-e2cb3ccfe61f" name="Changes" comment="" />
+      <created>1728152267184</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1728152267184</updated>
+      <workItem from="1728152268495" duration="23126000" />
+      <workItem from="1728289227273" duration="8762000" />
+      <workItem from="1728543364658" duration="9787000" />
+      <workItem from="1728737459298" duration="26225000" />
+      <workItem from="1728885342942" duration="7907000" />
+      <workItem from="1729012730420" duration="3718000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

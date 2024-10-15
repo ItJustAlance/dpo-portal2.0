@@ -157,6 +157,7 @@ body
     padding: 0 16px
 .main
   padding: 64px 0 200px
+  width: 100%
   +r($lg)
     padding-top: 24px
     padding-bottom: 110px
@@ -176,22 +177,45 @@ body
 
 .b-container
   display: flex
+  +r($lg)
+    flex-wrap: wrap
+    max-width: 100%
+    width: 100%
   .aside
     max-width: 280px
     min-width: 280px
+    +r($lg)
+      max-width: 100%
+      min-width: 100%
     &+.content-body
       margin-left: 20px
+      +r($lg)
+        margin: 0
   .content-body
     flex: 1 1 auto
-    
+    max-width: 100%
+    width: 100%
 .page-title
   padding-bottom: 48px
     
 .section
   padding-bottom: 32px
+.section-medium
+  padding-bottom: 40px
+  +r($sm)
+    padding-bottom: 32px
 .section-big
   padding-bottom: 120px
- 
+  
+  +r($lg)
+    padding-bottom: 80px
+  +r($md)
+    padding-bottom: 48px
+    &.--mb-sm
+      padding-bottom: 80px
+  +r($sm)
+    padding-bottom: 32px
+
 .--align-center
   text-align: center
     

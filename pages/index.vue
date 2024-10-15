@@ -153,8 +153,12 @@ function onCurrentSlide(event) {
       <div class="all">
         <div class="main-title h2-title">Популярные курсы</div>
         <div class="popular-list">
-          <CourseBox />
-          <CourseBox />
+          <div class="popular-item">
+            <CourseBox />
+          </div>
+          <div class="popular-item">
+            <CourseBox />
+          </div>
         </div>
         <section class="section">
           <div class="visible-md b-row-center --align-center">

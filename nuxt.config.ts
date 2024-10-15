@@ -1,4 +1,3 @@
-import svgLoader from "vite-svg-loader";
 import Aura from "@primevue/themes/aura";
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
@@ -6,7 +5,7 @@ const ONE_DAY = 60 * 60 * 24 * 1000;
 const ONE_WEEK = ONE_DAY * 7;
 
 export default defineNuxtConfig({
-  devtools: true,
+  // devtools: true,
   ssr: true,
 
   runtimeConfig: {
@@ -16,31 +15,12 @@ export default defineNuxtConfig({
     cookieRememberMeExpires: ONE_WEEK.toString(),
   },
 
-  modules: ["@primevue/nuxt-module", "@pinia/nuxt", "@nuxtjs/i18n", "@nuxt/content", "@vueuse/nuxt"],
+  modules: ["@primevue/nuxt-module", "@pinia/nuxt", "@nuxtjs/i18n", "@nuxt/content", "@vueuse/nuxt", "nuxt-icons"],
 
   css: ["@/assets/sass/_app.scss"],
 
   vite: {
-    plugins: [
-      svgLoader({
-        svgo: false,
-        // svgoConfig: {
-        //   multipass: true,
-        //   plugins: [
-        //     {
-        //       name: "preset-default",
-        //       params: {
-        //         overrides: {
-        //           // viewBox is required to resize SVGs with CSS.
-        //           // @see https://github.com/svg/svgo/issues/1128
-        //           removeViewBox: true,
-        //         },
-        //       },
-        //     },
-        //   ],
-        // },
-      }),
-    ],
+    plugins: [],
     build: {
       // sourcemap: 'inline'
     },

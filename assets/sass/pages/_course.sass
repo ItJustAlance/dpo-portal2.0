@@ -1,6 +1,7 @@
 .search-no-result
   display: flex
   padding: 10px
+  
   .img
     margin-right: 42px
     min-width: 80px
@@ -8,8 +9,17 @@
   .text
     display: flex
     align-items: center
-
+  
     
+.filter-active-list
+  +r($sm)
+    justify-content: center
+  .search-tag-item
+    +r($sm)
+      display: block
+      width: 100%
+      text-align: center
+      
 .b-row-center
   text-align: center
 
@@ -20,12 +30,27 @@
     &__content
       min-width: 600px
       max-width: 600px
+      +r($sm)
+        min-width: 280px
+        max-width: 100%
     &__img
       flex: 1 1 auto
       display: flex
       align-items: flex-end
+      +r($lg)
+        display: none
+      &.--mobile
+        display: none
+        max-width: 400px
+        margin-bottom: 48px
+        +r($lg)
+          display: block
+          +r($sm)
+            width: 100%
     .h2-title
       padding-bottom: 64px
+      +r($lg)
+        padding-bottom: 24px
   
   &__art
     color: $clrGrey70
@@ -34,12 +59,31 @@
     align-items: center
     .svg-icon
       margin-right: 8px
-      
+  &__title
+    .b-btns
+      .btn
+        +r($sm)
+          width: 100%
+          margin: 0 0 32px
   &__about
     display: flex
     gap: 40px
+    min-width: 100%
+    +r($lg)
+      flex-wrap: wrap
+      gap: 0
+      margin: 0 -20px
     .b-item
       flex: 1 1 100%
+      &.--inline
+        flex: auto
+      +r($lg)
+        flex: 0 0 50%
+        padding: 0 20px
+        margin-bottom: 36px
+      +r($xs)
+        flex: 0 0 100%
+        text-align: center
       .b-label
         color: $clrGrey70
         margin-bottom: 12px
@@ -49,19 +93,47 @@
         border-bottom: 1px solid $clrGrey40
       .b-text
         color: $clrPrimaryMain
-
-        
+        font-weight: 700
+        font-size: 18px
+        display: flex
+        img, .svg-icon
+          margin-top: 5px
+          min-width: 16px
+        .b-icon
+          min-width: 16px
+          max-width: 16px
+          margin-right: 8px
+        .text-row
+          display: flex
+          flex-wrap: wrap
+          margin: 0 -10px
+          min-width: 100%
+          .col-md-50
+            min-width: 50%
+            max-width: 50%
+            padding: 0 10px
+            display: flex
 .course-nav
   &-box
     display: flex
+    +r($lg)
+      flex-wrap: wrap
   &__text
     min-width: 600px
     max-width: 600px
+    +r($lg)
+      min-width: 100%
+      max-width: 100%
+      padding-bottom: 36px
   &__menu
     flex: 1 1 auto
     max-width: 465px
     margin-left: auto
     padding-left: 40px
+    +r($lg)
+      padding-left: 0
+      max-width: 100%
+      width: 100%
   &__menu
     .title
       color: $clrGrey100
@@ -71,10 +143,12 @@
     &-box
       & + .course-nav__menu-box
         margin-top: 64px
-  
+        +r($lg)
+          margin-top: 32px
   &__list
     &-item
       font-size: 18px
+      margin-right: 12px
       & + .course-nav__list-item
         margin-top: 12px
       &-wrap
@@ -91,7 +165,23 @@
 
 .section-title
   padding-bottom: 48px
-
+  +r($md)
+    padding-bottom: 32px
+  &.--title-raiting
+    .info-raiting
+      display: inline-flex
+      align-items: center
+      color: $clrGrey50
+      .star
+        display: inline-flex
+        vertical-align: top
+        margin-right: 8px
+        align-items: center
+      .num
+        display: inline-flex
+        vertical-align: top
+        margin-right: 8px
+        color: $clrGrey100
   
 .slide-teach
   text-align: center
@@ -112,14 +202,22 @@
 .course-program-list
   display: flex
   flex-wrap: wrap
+  margin: 0 -24px
   .b-item
     display: flex
     min-width: 50%
     max-width: 50%
     padding: 24px
+    +r($sm)
+      min-width: 100%
+      max-width: 100%
+      padding: 6px 0
     &__wrapper
       width: 100%
       display: flex
+      background: $clrGrey20
+      border-radius: 24px
+      padding: 24px
     .num
       min-width: 90px
       max-width: 90px
@@ -127,8 +225,154 @@
       font-size: 48px
       font-weight: 700
       line-height: 1
+      +r($sm)
+        font-size: 42px
+        min-width: 76px
+        max-width: 76px
+      +r($xss)
+        font-size: 38px
+        min-width: 64px
+        max-width: 64px
     .text
       flex: 1 1 auto
       color: $clrGrey100
       font-size: 20px
       padding-top: 4px
+      +r($md)
+        font-size: 18px
+      +r($xss)
+        font-size: 16px
+.result-filters
+  display: flex
+  gap: 8px
+  +r($lg)
+    margin-bottom: 32px
+  &__item
+    margin-bottom: 24px
+    display: flex
+    align-items: center
+    .b-checkbox
+      padding: 0 16px
+      color: $clrGrey90
+    &.--select
+      +r($lg)
+        flex: 1 1 auto
+    label
+      font-weight: 700
+      color: $clrGrey90
+  &__left
+    display: flex
+  &__right
+    display: flex
+    justify-content: flex-end
+    gap: 8px
+  .--w-md-50
+    max-width: 50%
+    min-width: 50%
+    +r($lg)
+      max-width: 100%
+      min-width: 100%
+  .--w-100
+    max-width: 100%
+    min-width: 100%
+  .search-box__search
+    padding-bottom: 0
+  .btn-filter
+    border: 1px solid #F0F0F0
+    border-radius: 100px
+    padding: 10px 24px
+ 
+.slider-teacher
+  +r($sm)
+    margin-bottom: 30px
+    margin-right: -120px
+    .p-carousel-prev-button, .p-carousel-next-button
+      display: none
+      
+    
+.filter-list-first
+  display: none
+  margin-bottom: 46px
+  +r($lg)
+    display: flex
+    gap: 32px
+  .b-checkbox
+    color: $clrGrey90
+    font-weight: 700
+
+    
+.slider-review
+  +r($md)
+    margin-right: -260px
+    margin-left: -12px
+    .p-carousel-prev-button, .p-carousel-next-button
+      display: none
+  +r($sm)
+    margin-right: -60vw
+  & .p-carousel-item
+    display: flex
+.review-item
+  font-size: 18px
+  color: $clrGrey100
+  display: flex
+  width: 100%
+  padding: 0 20px
+  +r($md)
+    padding: 0 12px
+  &__wrapper
+    background: $clrGrey20
+    border-radius: 24px
+    padding: 24px
+    width: 100%
+    display: flex
+    flex-direction: column
+    +r($sm)
+      padding: 12px
+  .raiting
+    margin-bottom: 12px
+    .op50
+      opacity: 0.5
+  .text
+    margin-bottom: 40px
+  &__bottom 
+    display: flex
+    font-size: 16px
+    margin-top: auto
+    .ava
+      max-width: 60px
+      min-width: 60px
+      margin-right: 12px
+    .b-right
+      flex: 1 1 auto
+    .name
+      color: $clrGrey100
+      font-weight: 700
+      margin-bottom: 4px
+    .whois
+      color: $clrGrey50 
+
+      
+.course-organizator-info
+  display: flex
+  .b-info
+    min-width: 50%
+    max-width: 560px
+    margin-right: 100px
+    +r($md)
+      max-width: 100%
+      margin: 0
+      .course-info__about .b-item
+        text-align: left
+  .b-img
+    flex: 1 1 auto
+    +r($md)
+      display: none
+  .card-org
+    font-size: 18px
+    background: #FAFAFA
+    border-radius: 24px
+    padding: 24px
+    margin-bottom: 44px
+  .course-info__about
+    flex-direction: column
+    gap: 24px

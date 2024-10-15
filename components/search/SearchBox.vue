@@ -86,8 +86,8 @@
     </div>
 
     <!-- Отображаем специальные теги только при необходимости -->
-    <div class="search-box__tags" :class="{ '--special': props.isSpecial }">
-      <div v-if="props.titleTags" class="title h4-title">Специальность</div>
+    <!--div class="search-box__tags" :class="{ '--special': props.isSpecial }">
+      <div v-if="props.titleTags" class="title h4-title">{{ titleTags }}</div>
       <ul class="list-search-tags">
         <li class="item-tag">
           <NuxtLink class="item-tag__link" to="/">Воспитательная работа</NuxtLink>
@@ -115,7 +115,7 @@
           <SvgIcon name="caret-circle-down" class="fnone ic24"></SvgIcon>
         </button>
       </div>
-    </div>
+    </div -->
   </div>
 </template>
 
@@ -125,11 +125,12 @@ import clickOutSide from "@mahdikhashan/vue3-click-outside";
 import { ref } from "vue";
 
 interface Props {
-  isMore: boolean;
+  isMore?: boolean;
   isSpecial?: boolean;
-  titleTags: string;
+  titleTags?: string | null;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const props = withDefaults(defineProps<Props>(), {
   isMore: false,
   isSpecial: false,

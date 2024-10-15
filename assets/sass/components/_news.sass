@@ -1,0 +1,107 @@
+.news-list
+  display: flex
+  min-width: 100%
+  margin: 0 -20px
+  flex-wrap: wrap
+.news-item
+  width: 33.333%
+  padding: 0 20px 48px
+  &__wrapper
+    width: 100%
+    display: flex
+    flex-direction: column
+    gap: 12px
+  .img
+    height: 240px
+    border-radius: 24px
+    background: $clrGrey30
+
+  .top
+    display: flex
+  .date
+    color: $clrGrey70
+    font-size: 14px
+    font-weight: 700
+    margin-left: auto
+    display: flex
+    align-items: center
+    .svg-icon
+      margin-right: 8px
+  .title
+    color: #000
+    font-weight: 700
+    font-size: 20px
+    display: block
+    &:hover
+      color: $clrPrimaryHover
+  .text
+    display: block
+    color: $clrGrey70
+    font-size: 18px
+    padding-bottom: 12px
+    &:hover
+      color: $clrPrimaryHover
+  .links
+    display: flex
+    flex-wrap: wrap
+    gap: 8px
+
+    
+    
+.news-info-header
+  .list-tags
+    margin-bottom: 24px
+  .h-title-box
+    display: flex
+    .img
+      margin-right: 40px
+      max-width: 200px
+      min-width: 200px
+      display: flex
+      align-items: center
+      margin-bottom: 24px
+  .h1-title
+    font-size: 48px
+    font-weight: 700
+    line-height: 1.2
+    margin: 0 0 24px
+    padding: 0
+  .date
+    display: flex
+    align-items: center
+    font-size: 14px
+    font-weight: 700
+    color: $clrGrey70
+    padding-bottom: 24px
+
+
+
+.slider-news
+  position: relative
+  &-wrapper
+    position: relative
+    margin-bottom: 32px
+    +r($md)
+      padding-bottom: 50px
+    .indicator
+      display: block
+      font-size: 16px
+      font-weight: bold
+      color: $clrGrey60
+      text-align: center
+      padding-top: 24px
+      width: 100%
+      padding-bottom: 10px
+      strong
+        color: $clrGrey100
+
+    .p-carousel-prev-button
+      position: absolute
+      top: calc(100% + 16px)
+      left: calc(50% - 100px)
+      z-index: 2
+    .p-carousel-next-button
+      position: absolute
+      top: calc(100% + 16px)
+      right: calc(50% - 100px)
+      z-index: 2

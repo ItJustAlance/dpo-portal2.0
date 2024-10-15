@@ -1,5 +1,9 @@
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref, reactive } from "vue";
+
+const route = useRoute();
+const id = route.params.course;
+console.log('id', id)
 const breadcrumbList = ref([
   { label: "Курсы", route: "/" },
   {
@@ -21,6 +25,7 @@ const sliderTeach = reactive({
       breakpoint: "1200px",
       numVisible: 4,
       numScroll: 1,
+      circular: true,
     },
     {
       breakpoint: "1023px",
@@ -28,7 +33,69 @@ const sliderTeach = reactive({
       numScroll: 1,
     },
     {
+      breakpoint: "768px",
+      numVisible: 2,
+      numScroll: 1,
+    },
+    {
       breakpoint: "560px",
+      numVisible: 2,
+      numScroll: 1,
+      circular: true,
+    },
+  ],
+});
+const sliderReview = reactive({
+  data: [
+    {
+      id: 1,
+      url: "/img/ava.png",
+      name: "Мацаль И.И",
+      whois: "гл.инженер ООО Экзамен-Технолаб",
+      text: "Программа повышения квалификации реализуется в течение одного месяца по мере комплектования группы в соответствии с календарным учебным графиком. Продолжительность реализации программы по графику – две недели с момента укомплектованности группы",
+    },
+    {
+      id: 2,
+      url: "/img/ava.png",
+      name: "Мацаль И.И",
+      whois: "гл.инженер ",
+      text: "Программа повышения квалификации реализуется в течение одного месяца по мере комплектования группы в соответствии с календарным учебным графиком. Продолжительность реализации программы по графику.",
+    },
+    {
+      id: 3,
+      url: "/img/ava.png",
+      name: "Мацаль И.И",
+      whois: "гл.инженер ООО Экзамен-Технолаб",
+      text: "Программа повышения квалификации реализуется в течение одного месяца по мере комплектования группы в соответствии с календарным учебным графиком. Продолжительность реализации программы по графику – две недели с момента укомплектованности группы",
+    },
+    {
+      id: 4,
+      url: "/img/ava.png",
+      name: "Мацаль И.И",
+      whois: "гл.инженер ООО Экзамен-Технолаб",
+      text: "Программа повышения квалификации реализуется в течение одного месяца по мере комплектования группы в соответствии с календарным учебным графиком.",
+    },
+    {
+      id: 5,
+      url: "/img/ava.png",
+      name: "Мацаль И.И",
+      whois: "гл.инженер ООО Экзамен-Технолаб",
+      text: "Программа повышения квалификации реализуется в течение одного месяца по мере комплектования",
+    },
+  ],
+  options: [
+    {
+      breakpoint: "2000px",
+      numVisible: 3,
+      numScroll: 1,
+    },
+    {
+      breakpoint: "1023px",
+      numVisible: 2,
+      numScroll: 1,
+    },
+    {
+      breakpoint: "600px",
       numVisible: 2,
       numScroll: 1,
     },
@@ -40,8 +107,8 @@ const sliderTeach = reactive({
   <div class="all">
     <Breadcrumb :model="breadcrumbList">
       <template #item="{ item, props }">
-        <NuxtLink v-if="item.route" v-slot="{ href, navigate }" class="bread-item" :to="item.route" custom>
-          <a :href="href" v-bind="props.action" @click="navigate">
+        <NuxtLink v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
+          <a class="bread-item" :href="href" v-bind="props.action" @click="navigate">
             <span>{{ item.label }}</span>
           </a>
         </NuxtLink>
@@ -63,6 +130,7 @@ const sliderTeach = reactive({
               <div class="h2-title">
                 Изучение основ трёхмерного моделирования и печати для использования в образовательном процессе
               </div>
+              <div class="course-info-header__img --mobile"><img src="/img/course-img.png" alt="" /></div>
               <div class="b-btns">
                 <a href="#programm-course" class="btn btn--second">Программа курса</a>
                 <button class="btn">Записаться</button>
@@ -70,35 +138,35 @@ const sliderTeach = reactive({
             </div>
           </div>
 
-          <div class="course-info-header__img"></div>
+          <div class="course-info-header__img"><img src="/img/course-img.png" alt="" /></div>
         </div>
         <section class="section-big">
           <div class="course-info__about">
             <div class="b-item">
               <div class="b-label">ПРОДОЛЖИТЕЛЬНОСТЬ</div>
               <div class="b-text">
-                <SvgIcon name="ic-clock" class="fnone ic12"></SvgIcon>
+                <div class="b-icon"><SvgIcon name="ic-clock" class="fnone ic12"></SvgIcon></div>
                 32 часа
               </div>
             </div>
             <div class="b-item">
               <div class="b-label">ФИНАНСИРОВАНИЕ</div>
               <div class="b-text">
-                <SvgIcon name="ic-tag" class="fnone ic12"></SvgIcon>
+                <div class="b-icon"><SvgIcon name="ic-tag" class="fnone ic12"></SvgIcon></div>
                 6 450 ₽
               </div>
             </div>
             <div class="b-item">
               <div class="b-label">ФОРМА</div>
               <div class="b-text">
-                <SvgIcon name="ic-monitor" class="fnone ic12"></SvgIcon>
+                <div class="b-icon"><SvgIcon name="ic-monitor" class="fnone ic12"></SvgIcon></div>
                 Очно-заочная с ДОТ
               </div>
             </div>
             <div class="b-item">
               <div class="b-label">СТАРТ</div>
               <div class="b-text">
-                <SvgIcon name="calendar-check" class="fnone ic12"></SvgIcon>
+                <div class="b-icon"><SvgIcon name="calendar-check" class="fnone ic12"></SvgIcon></div>
                 1 сентября 2023
               </div>
             </div>
@@ -171,6 +239,7 @@ const sliderTeach = reactive({
             :num-visible="4"
             :num-scroll="1"
             :show-indicators="false"
+            circular
             :responsive-options="sliderTeach.options"
           >
             <template #item="slotProps">
@@ -188,8 +257,8 @@ const sliderTeach = reactive({
             </template>
           </Carousel>
         </section>
-        <section class="section-big --align-center">
-          <NuxtLink class="btn">Записаться на курс</NuxtLink>
+        <section class="section-big --mb-sm --align-center">
+          <NuxtLink class="btn btn--sm-full">Записаться на курс</NuxtLink>
         </section>
         <section class="section-big">
           <h2 class="h2-title section-title">Программа курса</h2>
@@ -235,6 +304,110 @@ const sliderTeach = reactive({
                 <div class="num">06</div>
                 <div class="text">Итоговая аттестация</div>
               </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-big --mb-sm">
+          <h2 class="h2-title section-title --title-raiting">
+            Оценки курса:
+            <span class="info-raiting">
+              <span class="star"><img src="/img/raiting.svg" alt="" /></span>
+              <span class="num">4,0</span>
+              (12 оценок)
+            </span>
+          </h2>
+          <Carousel
+            class="slider-review"
+            :value="sliderReview.data"
+            :num-visible="4"
+            :num-scroll="1"
+            :show-indicators="false"
+            circular
+            :responsive-options="sliderReview.options"
+          >
+            <template #item="slotProps">
+              <div class="review-item">
+                <div class="review-item__wrapper">
+                  <div class="raiting">
+                    <SvgIcon name="star" class="fnone ic16"></SvgIcon>
+                    <SvgIcon name="star" class="fnone ic16"></SvgIcon>
+                    <SvgIcon name="star" class="fnone ic16"></SvgIcon>
+                    <SvgIcon name="star" class="fnone op50 ic16"></SvgIcon>
+                    <SvgIcon name="star" class="fnone op50 ic16"></SvgIcon>
+                  </div>
+                  <div class="text">
+                    {{ slotProps.data.text }}
+                  </div>
+                  <div class="review-item__bottom">
+                    <div class="ava">
+                      <img :src="slotProps.data.url" :alt="slotProps.data.id" class="w-full rounded" />
+                    </div>
+                    <div class="b-right">
+                      <div class="name">{{ slotProps.data.name }}</div>
+                      <div class="whois">{{ slotProps.data.whois }}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </template>
+            <template #previcon>
+              <SvgIcon name="ic-arrow-circle-left" class="fnone ic48"></SvgIcon>
+            </template>
+            <template #nexticon>
+              <SvgIcon name="ic-arrow-circle-right" class="fnone ic48"></SvgIcon>
+            </template>
+          </Carousel>
+        </section>
+        <section class="section-big">
+          <h2 class="h2-title section-title">Организатор</h2>
+          <div class="course-organizator-info">
+            <div class="b-info">
+              <div class="card-org">
+                <div class="img"><img src="/img/org-img.png" alt="" /></div>
+                <div class="text">ФГАОУ ВО «Национальный исследовательский технологический университет «МИСиС»</div>
+              </div>
+              <div class="course-info__about">
+                <div class="b-item">
+                  <div class="b-label">КОНТАКТЫ</div>
+                  <div class="b-text">
+                    <img src="/img/phone.svg" alt="" />
+                    +7(495)114-56-28
+                  </div>
+                </div>
+                <div class="b-item">
+                  <div class="b-label">АДРЕС И МЕСТО ОБУЧЕНИЯ</div>
+                  <div class="b-text">
+                    <img src="/img/mapPin.svg" alt="" />
+                    г. Москва, ул. Сретенка, д. 24/2, стр. 1, 3 этаж
+                  </div>
+                </div>
+                <div class="b-item">
+                  <div class="b-label">ЗАНЯТИЯ ПРОВОДЯТСЯ ПО ДНЯМ</div>
+                  <div class="b-text">
+                    <img src="/img/calendarCheck.svg" alt="" />
+                    Уточняется у ответственного за курс
+                  </div>
+                </div>
+              </div>
+              <!--end course-info__about-->
+            </div>
+            <div class="b-img">
+              <img src="/img/browsing.svg" alt="" />
+            </div>
+          </div>
+          <!--end course-organizator-info -->
+        </section>
+        <section class="section-big --mb-sm --align-center">
+          <NuxtLink class="btn btn--md-full">Записаться на курс</NuxtLink>
+        </section>
+        <section class="section-big">
+          <h2 class="h2-title section-title">Вам может быть интересно</h2>
+          <div class="popular-list">
+            <div class="popular-item">
+              <CourseBox />
+            </div>
+            <div class="popular-item">
+              <CourseBox />
             </div>
           </div>
         </section>

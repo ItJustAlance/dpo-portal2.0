@@ -1,22 +1,16 @@
 <script setup>
-import { defineAsyncComponent } from 'vue';
+// import { defineAsyncComponent } from "vue";
 
 const props = defineProps({
   name: {
     type: String,
-    required: true
+    required: true,
   },
-  count: String
-
-})
-const className = `svg-icon  svg-icon--${props.name}`
-//const inheritAttrs = false;
-
-const icon = defineAsyncComponent(() =>
-  import(`~/assets/svg/${props.name}.svg`)
-)
+});
+const className = `svg-icon  svg-icon--${props.name}`;
+// const inheritAttrs = false;
 </script>
 
 <template>
-  <component :is="icon"  :class="className" />
+  <NuxtIcon :class="className" filled :name="props.name" />
 </template>

@@ -1,0 +1,38 @@
+.event-list
+  display: flex
+  flex-wrap: wrap
+  margin: 0 -20px
+  &.--mb0
+    .event-item
+      padding-bottom: 0
+  &.--cols4
+    .event-item
+      min-width: 25%
+      max-width: 25%
+      width: 25%
+      
+.event-item
+  width: 33.333%
+  padding: 0 20px 20px
+  &-wrapper
+  .img
+    margin-bottom: 12px
+  .event-row
+    display: flex
+    margin-bottom: 12px
+  .date
+    font-size: 14px
+    color: $clrGrey70
+    font-weight: 700
+  .price
+    margin-left: auto
+    font-size: 14px
+    color: $clrGrey70
+    font-weight: 700
+  .title
+    font-weight: 700
+    font-size: 20px
+    .link
+      color: #000
+      &:hover
+        color: $clrPrimaryHover

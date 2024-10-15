@@ -151,19 +151,20 @@
             border-bottom: 1px solid $clrPrimaryMain
           &.--arr
             .svg-icon--menu-arr
-              fill: none
-              margin-left: 8px
-              +r($lg)
-                width: 16px
-                height: 16px
-              .p1
-                fill: #1D2533
+              svg
+                fill: none
+                margin-left: 8px
                 +r($lg)
-                  fill: #0096E0
-              .p2
-                stroke: #1D2533
-                +r($lg)
-                  stroke: #0096E0
+                  width: 16px
+                  height: 16px
+                .p1
+                  fill: #1D2533
+                  +r($lg)
+                    fill: #0096E0
+                .p2
+                  stroke: #1D2533
+                  +r($lg)
+                    stroke: #0096E0
                 
   .submenu
     display: none
@@ -250,7 +251,7 @@
       padding: 0
       list-style: none
       +r($lg)
-        fz14
+        font-size: 14px
       li
         display: block
         font-weight: 700

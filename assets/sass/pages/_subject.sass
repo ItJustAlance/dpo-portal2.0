@@ -1,0 +1,69 @@
+.docs-list
+  margin: 0 -20px 48px
+  display: flex
+  &.--cols3
+    .item-doc
+      max-width: 33.333%
+      min-width: 33.333%
+  &.--border-y
+    border-top: 1px solid #F0F0F0
+    border-bottom: 1px solid #F0F0F0
+    padding: 32px 0
+.item-doc
+  max-width: 50%
+  min-width: 50%
+  padding: 0 20px
+  &__wrapper
+    padding: 24px
+    display: flex
+    align-items: center
+    background: $clrGrey20
+    border-radius: 24px
+    color: $clrGrey100
+  .b-icon
+    min-width: 52px
+    max-width: 52px
+    height: 52px
+    margin-right: 32px
+    border-radius: 12px
+    display: flex
+    align-items: center
+    justify-content: center
+    background: $clrPrimaryBorder
+
+    
+.slider-license
+  position: relative
+  .p-carousel-content-container
+    margin-right: -400px
+    .p-carousel-item
+      
+  &-wrapper
+    position: relative
+    margin-bottom: 32px
+    +r($md)
+      padding-bottom: 50px
+    .indicator
+      display: block
+      font-size: 16px
+      font-weight: bold
+      color: $clrGrey60
+      text-align: center
+      padding-top: 24px
+      width: 100%
+      padding-bottom: 10px
+      strong
+        color: $clrGrey100
+    
+    .p-carousel-prev-button
+      position: absolute
+      top: calc(100% + 16px)
+      left: calc(50% - 100px)
+      z-index: 2
+    .p-carousel-next-button
+      position: absolute
+      top: calc(100% + 16px)
+      right: calc(50% - 100px)
+      z-index: 2
+  .slide-license
+    padding: 0 20px
