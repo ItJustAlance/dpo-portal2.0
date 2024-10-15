@@ -69,13 +69,13 @@ async function onLogoutClick() {
             <NuxtLink :to="{ name: 'courses' }" class="nav-menu-item__link"> Курсы </NuxtLink>
           </li>
           <li class="nav-menu-item">
-            <NuxtLink to="/" class="nav-menu-item__link"> Мероприятия </NuxtLink>
+            <NuxtLink :to="{ name: 'events' }" class="nav-menu-item__link"> Мероприятия </NuxtLink>
           </li>
           <li class="nav-menu-item">
-            <NuxtLink to="/" class="nav-menu-item__link"> Конкурсы </NuxtLink>
+            <NuxtLink :to="{ name: 'courses' }" class="nav-menu-item__link"> Конкурсы </NuxtLink>
           </li>
           <li class="nav-menu-item">
-            <NuxtLink to="/" class="nav-menu-item__link"> Новости </NuxtLink>
+            <NuxtLink :to="{ name: 'news' }" class="nav-menu-item__link"> Новости </NuxtLink>
           </li>
           <li class="nav-menu-item nav-menu-item__submenu">
             <div to="/" class="nav-menu-item__link --arr">
@@ -97,10 +97,10 @@ async function onLogoutClick() {
                       </div>
                       <!--end submenu__item -->
                       <div class="submenu__item">
-                        <div class="submenu__item-up">
-                          <div class="submenu__icon"><img src="/img/menu-chalkboardTeacher.svg" alt="" /></div>
-                          <div class="submenu__item-label">Организации-субъекты ДПО</div>
-                        </div>
+                        <NuxtLink :to="{ name: 'subjects' }" class="submenu__item-up">
+                          <span class="submenu__icon"><img src="/img/menu-chalkboardTeacher.svg" alt="" /></span>
+                          <span class="submenu__item-label">Организации-субъекты ДПО</span>
+                        </NuxtLink>
                         <div class="submenu__item-bottom">Организации ДПО размещающие программы на портале ДПО</div>
                       </div>
                       <!--end submenu__item -->

@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fbb4658-f32c-45e0-aff1-e2cb3ccfe61f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/components/news/NewsBox.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/news/NewsBox.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/elements/_typography.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/elements/_typography.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/HeaderComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/HeaderComp.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/program/ProgramBox.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/program/ProgramBox.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/subject/SubjectBox.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/subject/SubjectBox.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/subjects/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/subjects/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +71,7 @@
       <workItem from="1728543364658" duration="9787000" />
       <workItem from="1728737459298" duration="26225000" />
       <workItem from="1728885342942" duration="7907000" />
-      <workItem from="1729012730420" duration="4334000" />
+      <workItem from="1729012730420" duration="5761000" />
     </task>
     <servers />
   </component>

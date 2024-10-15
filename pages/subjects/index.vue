@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
-import { storeToRefs } from "pinia";
+import { ref } from "vue";
+// import { storeToRefs } from "pinia";
 // import { useAuthStore } from "@/stores/auth";
-import { useFiltersStore } from "~/stores/filters";
+// import { useFiltersStore } from "~/stores/filters";
 
 // const currentUser = useAuthUser();
 
@@ -203,7 +203,7 @@ const filterCourse = ref({ id: "2", name: "Курсы", value: "val" });
               <!--end result-filters -->
             </div>
             <div class="subject-list">
-              <div v-for="item in programsList" :key="item.id" class="subject-item"> 
+              <div v-for="item in programsList" :key="item.id" class="subject-item">
                 <SubjectBox :key="item.id" :data="item" />
               </div>
             </div>

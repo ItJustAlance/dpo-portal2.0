@@ -26,9 +26,9 @@ const props = withDefaults(defineProps<Props>(), {
   <div class="program-item__wrapper">
     <div class="top">
       <div class="img">
-        <a href="#"><img src="/img/program-logo.png" alt="" /></a>
+        <NuxtLink :to="`/programs/test`"><img src="/img/program-logo.png" alt="" /></NuxtLink>
       </div>
-      <a class="title" href="#">{{ data?.title }}</a>
+      <NuxtLink class="title" :to="`/programs/test`">{{ data?.title }}</NuxtLink>
     </div>
     <div class="articul">
       <div class="mini-info --clear">
@@ -38,16 +38,16 @@ const props = withDefaults(defineProps<Props>(), {
         <div class="mini-info__text">{{ data?.articul }}</div>
       </div>
     </div>
-    <div class="text">{{ data?.text }}</div>
+    <NuxtLink :to="`/programs/test`" class="text">{{ data?.text }}</NuxtLink>
 
     <div class="bottom">
       <div class="links">
-        <a v-for="(tag, index) in data?.tags" :key="index" href="#" class="mini-info --blue">
+        <NuxtLink v-for="(tag, index) in data?.tags" :key="index" :to="`/programs/${index}`" class="mini-info --blue">
           <span class="mini-info__ico">
             <SvgIcon name="link" class="fnone ic16"></SvgIcon>
           </span>
           <span class="mini-info__text">{{ tag }}</span>
-        </a>
+        </NuxtLink>
       </div>
     </div>
   </div>

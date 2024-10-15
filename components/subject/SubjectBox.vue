@@ -4,7 +4,7 @@ interface Props {
 }
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const props = withDefaults(defineProps<Props>(), {
-  data: {},
+  data: () => ({}), // Use an arrow function that returns an object
 });
 </script>
 
@@ -12,9 +12,9 @@ const props = withDefaults(defineProps<Props>(), {
   <div class="subject-item__wrapper">
     <div class="top">
       <div class="img">
-        <a href="#"><img src="/img/program-logo.png" alt="" /></a>
+        <NuxtLink class="title" :to="`/subjects/test`"><img src="/img/program-logo.png" alt="" /></NuxtLink>
       </div>
-      <a class="title" href="#">{{ data?.title }}</a>
+      <NuxtLink class="title" :to="`/subjects/test`">{{ data?.title }}</NuxtLink>
     </div>
     <div class="bottom">
       <div class="links">
