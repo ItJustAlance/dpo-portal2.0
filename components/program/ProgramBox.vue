@@ -5,6 +5,7 @@ interface Props {
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const props = withDefaults(defineProps<Props>(), {
+  // eslint-disable-next-line vue/require-valid-default-prop
   data: {
     type: Object,
     default: () => ({}),
