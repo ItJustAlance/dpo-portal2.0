@@ -116,8 +116,15 @@
 .course-nav
   &-box
     display: flex
-    +r($lg)
-      flex-wrap: wrap
+    flex-wrap: wrap
+    .competition-card
+      width: 100%
+      background: $clrGrey20
+      padding: 24px
+      border-radius: 24px
+      margin-bottom: 16px
+      .img
+        margin-bottom: 24px
   &__text
     min-width: 600px
     max-width: 600px

@@ -31,6 +31,39 @@
     justify-content: center
     background: $clrPrimaryBorder
 
+.nums-list
+  margin: 0 -20px 48px
+  display: flex
+  &.--cols3
+    .item-num
+      max-width: 33.333%
+      min-width: 33.333%
+.item-num
+  max-width: 50%
+  min-width: 50%
+  padding: 0 20px
+  &__wrapper
+    padding: 24px
+    display: flex
+    align-items: center
+    background: $clrGrey20
+    border-radius: 24px
+    color: $clrGrey100
+  .b-num
+    min-width: 52px
+    max-width: 52px
+    height: 52px
+    margin-right: 32px
+    border-radius: 12px
+    display: flex
+    align-items: center
+    justify-content: center
+    background: $clrPrimaryBorder
+    font-size: 20px
+    font-weight: 700
+    color: $clrPrimaryMain
+    
+    
     
 .slider-license
   position: relative

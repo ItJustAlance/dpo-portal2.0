@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fbb4658-f32c-45e0-aff1-e2cb3ccfe61f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/pages/competitions/[competition].vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/competitions/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/elements/_typography.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/elements/_typography.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/HeaderComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/HeaderComp.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/program/ProgramBox.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/program/ProgramBox.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/subject/SubjectBox.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/subject/SubjectBox.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/subjects/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/subjects/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icons/check-circle.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/check-circle.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/components/_event-box.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/components/_event-box.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/elements/_icons.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/elements/_icons.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/elements/_ui.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/elements/_ui.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/layout/_general.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/layout/_general.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/pages/_course.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/pages/_course.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/pages/_subject.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/pages/_subject.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/events/[event].vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/events/[event].vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +76,7 @@
       <workItem from="1728543364658" duration="9787000" />
       <workItem from="1728737459298" duration="26225000" />
       <workItem from="1728885342942" duration="7907000" />
-      <workItem from="1729012730420" duration="5761000" />
+      <workItem from="1729012730420" duration="16372000" />
     </task>
     <servers />
   </component>
