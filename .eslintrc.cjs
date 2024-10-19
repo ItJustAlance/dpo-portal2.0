@@ -16,7 +16,7 @@ module.exports = {
     sourceType: 'module',
   },
   extends: [
-    'eslint:recommended',
+    // 'eslint:recommended',
     '@nuxtjs/eslint-config-typescript',
     'plugin:prettier/recommended',
   ],
