@@ -5,17 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fbb4658-f32c-45e0-aff1-e2cb3ccfe61f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/competitions/[competition].vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/competitions/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/expertise/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.cjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/check-circle.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/check-circle.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/components/_event-box.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/components/_event-box.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/elements/_icons.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/elements/_icons.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc.cjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/sass/elements/_ui.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/elements/_ui.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/layout/_general.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/layout/_general.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/pages/_course.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/pages/_course.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/pages/_subject.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/pages/_subject.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/events/[event].vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/events/[event].vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,12 +46,15 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.tslint&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
     &quot;ts.external.directory.path&quot;: &quot;F:\\mail\\sites\\2024\\dpop\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -76,7 +77,8 @@
       <workItem from="1728543364658" duration="9787000" />
       <workItem from="1728737459298" duration="26225000" />
       <workItem from="1728885342942" duration="7907000" />
-      <workItem from="1729012730420" duration="16372000" />
+      <workItem from="1729012730420" duration="20083000" />
+      <workItem from="1729244174411" duration="4328000" />
     </task>
     <servers />
   </component>

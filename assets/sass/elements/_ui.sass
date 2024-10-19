@@ -179,6 +179,43 @@
       font-weight: 700
       color: $clrGrey90
     
+.tabs-box
+  .p-accordion
+    line-height: 1.3
+  .docs-list
+    margin: 0 -8px
+    .item-doc
+      padding-left: 8px
+      padding-right: 8px
+  .p-accordionheader
+    background: none
+    margin: 0
+    padding: 0
+    font-size: 20px
+    color: $clrGrey100
+    &:hover
+      background: none !important
+      color: $clrGrey100 !important
+  .p-accordioncontent
+    background: none
+    padding: 16px 0
+    &-content
+      background: none
+      padding: 2px 0 0
+  .p-accordionpanel
+    border-radius: 16px
+    padding: 16px 24px
+    background: $clrGrey30
+    border: none
+    font-size: 18px
+    color: $clrGrey80
+    &-active
+      background: $clrGrey30
+      .p-accordionheader
+        background: none !important
+        color: $clrGrey100 !important
+    &+.p-accordionpanel
+      margin-top: 24px
     
     
 /*** PRIMEVUE

@@ -1,114 +1,99 @@
 <script lang="ts" setup>
-import { ref, reactive, computed } from "vue";
+import { ref, reactive } from 'vue'
 
-const route = useRoute();
-const id = route.params.course;
+// const route = useRoute();
+// const id = route.params.course;
 
 const breadcrumbList = ref([
-  { label: "Курсы", route: "/" },
+  { label: 'Курсы', route: '/' },
   {
-    label: "Изучение основ трёхмерного моделирования и печати для использования в образовательном процессе",
+    label:
+      'Изучение основ трёхмерного моделирования и печати для использования в образовательном процессе',
   },
-]);
+])
 
 const sliderTeach = reactive({
   data: [
-    { id: 1, url: "/img/teach1.png", title: "Мацаль И.И", text: "гл.инженер ООО Экзамен-Технолаб" },
-    { id: 2, url: "/img/teach2.png", title: "Мацаль И.И", text: "гл.инженер ООО Экзамен-Технолаб" },
-    { id: 3, url: "/img/teach-default.png", title: "Мацаль И.И", text: "гл.инженер ООО Экзамен-Технолаб" },
-    { id: 4, url: "/img/teach2.png", title: "Мацаль И.И", text: "гл.инженер ООО Экзамен-Технолаб" },
-    { id: 5, url: "/img/teach-default.png", title: "Мацаль И.И", text: "гл.инженер ООО Экзамен-Технолаб" },
-    { id: 6, url: "/img/teach1.png", title: "Мацаль И.И", text: "гл.инженер ООО Экзамен-Технолаб" },
+    {
+      id: 1,
+      url: '/img/teach1.png',
+      title: 'Мацаль И.И',
+      text: 'гл.инженер ООО Экзамен-Технолаб',
+    },
+    {
+      id: 2,
+      url: '/img/teach2.png',
+      title: 'Мацаль И.И',
+      text: 'гл.инженер ООО Экзамен-Технолаб',
+    },
+    {
+      id: 3,
+      url: '/img/teach-default.png',
+      title: 'Мацаль И.И',
+      text: 'гл.инженер ООО Экзамен-Технолаб',
+    },
+    {
+      id: 4,
+      url: '/img/teach2.png',
+      title: 'Мацаль И.И',
+      text: 'гл.инженер ООО Экзамен-Технолаб',
+    },
+    {
+      id: 5,
+      url: '/img/teach-default.png',
+      title: 'Мацаль И.И',
+      text: 'гл.инженер ООО Экзамен-Технолаб',
+    },
+    {
+      id: 6,
+      url: '/img/teach1.png',
+      title: 'Мацаль И.И',
+      text: 'гл.инженер ООО Экзамен-Технолаб',
+    },
   ],
   options: [
     {
-      breakpoint: "1200px",
+      breakpoint: '1200px',
       numVisible: 4,
       numScroll: 1,
       circular: true,
     },
     {
-      breakpoint: "1023px",
+      breakpoint: '1023px',
       numVisible: 3,
       numScroll: 1,
     },
     {
-      breakpoint: "768px",
+      breakpoint: '768px',
       numVisible: 2,
       numScroll: 1,
     },
     {
-      breakpoint: "560px",
+      breakpoint: '560px',
       numVisible: 2,
       numScroll: 1,
       circular: true,
     },
   ],
-});
-const sliderReview = reactive({
-  data: [
-    {
-      id: 1,
-      url: "/img/ava.png",
-      name: "Мацаль И.И",
-      whois: "гл.инженер ООО Экзамен-Технолаб",
-      text: "Программа повышения квалификации реализуется в течение одного месяца по мере комплектования группы в соответствии с календарным учебным графиком. Продолжительность реализации программы по графику – две недели с момента укомплектованности группы",
-    },
-    {
-      id: 2,
-      url: "/img/ava.png",
-      name: "Мацаль И.И",
-      whois: "гл.инженер ",
-      text: "Программа повышения квалификации реализуется в течение одного месяца по мере комплектования группы в соответствии с календарным учебным графиком. Продолжительность реализации программы по графику.",
-    },
-    {
-      id: 3,
-      url: "/img/ava.png",
-      name: "Мацаль И.И",
-      whois: "гл.инженер ООО Экзамен-Технолаб",
-      text: "Программа повышения квалификации реализуется в течение одного месяца по мере комплектования группы в соответствии с календарным учебным графиком. Продолжительность реализации программы по графику – две недели с момента укомплектованности группы",
-    },
-    {
-      id: 4,
-      url: "/img/ava.png",
-      name: "Мацаль И.И",
-      whois: "гл.инженер ООО Экзамен-Технолаб",
-      text: "Программа повышения квалификации реализуется в течение одного месяца по мере комплектования группы в соответствии с календарным учебным графиком.",
-    },
-    {
-      id: 5,
-      url: "/img/ava.png",
-      name: "Мацаль И.И",
-      whois: "гл.инженер ООО Экзамен-Технолаб",
-      text: "Программа повышения квалификации реализуется в течение одного месяца по мере комплектования",
-    },
-  ],
-  options: [
-    {
-      breakpoint: "2000px",
-      numVisible: 3,
-      numScroll: 1,
-    },
-    {
-      breakpoint: "1023px",
-      numVisible: 2,
-      numScroll: 1,
-    },
-    {
-      breakpoint: "600px",
-      numVisible: 2,
-      numScroll: 1,
-    },
-  ],
-});
+})
 </script>
 
 <template>
   <div class="all">
     <Breadcrumb :model="breadcrumbList">
       <template #item="{ item, props }">
-        <NuxtLink v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
-          <a class="bread-item" :href="item.route" v-bind="props.action" @click="navigate">
+        <NuxtLink
+          v-if="item.route"
+          v-slot="{ navigate }"
+          :to="item.route"
+          custom
+        >
+          <a
+            class="bread-item"
+            :href="item.route"
+            v-bind="props.action"
+            @click="navigate"
+          >
             <span>{{ item.label }}</span>
           </a>
         </NuxtLink>
@@ -129,11 +114,14 @@ const sliderReview = reactive({
                   <div class="mini-info__ico">
                     <SvgIcon name="bookmarks" class="fnone ic16"></SvgIcon>
                   </div>
-                  <div class="mini-info__text">Университетская среда для учителей</div>
+                  <div class="mini-info__text">
+                    Университетская среда для учителей
+                  </div>
                 </div>
               </div>
               <h1 class="h1-title">
-                Образование Древнерусского государства и формирование его территорий в IX - н. XII вв.
+                Образование Древнерусского государства и формирование его
+                территорий в IX - н. XII вв.
               </h1>
               <div class="course-info__about">
                 <div class="b-item">
@@ -149,7 +137,9 @@ const sliderReview = reactive({
                 <div class="b-item">
                   <div class="b-label">ФОРМА</div>
                   <div class="b-text">
-                    <div class="b-icon"><SvgIcon name="ic-monitor" class="fnone ic12" /></div>
+                    <div class="b-icon">
+                      <SvgIcon name="ic-monitor" class="fnone ic12" />
+                    </div>
 
                     Очно
                   </div>
@@ -157,14 +147,18 @@ const sliderReview = reactive({
                 <div class="b-item">
                   <div class="b-label">АДРЕС</div>
                   <div class="b-text">
-                    <div class="b-icon"><img src="/img/mapPin.svg" alt="" /></div>
+                    <div class="b-icon">
+                      <img src="/img/mapPin.svg" alt="" />
+                    </div>
                     пр. Пушкина 27
                   </div>
                 </div>
                 <div class="b-item">
                   <div class="b-label">МЕСТА</div>
                   <div class="b-text">
-                    <div class="b-icon"><img src="/img/users.png" alt="" /></div>
+                    <div class="b-icon">
+                      <img src="/img/users.png" alt="" />
+                    </div>
                     свободно 26 из 75
                   </div>
                 </div>
@@ -184,28 +178,36 @@ const sliderReview = reactive({
           <div class="course-nav-box">
             <div class="course-nav__text article">
               <p>
-                Курс направлен на совершенствование профессиональных компетенций обучающихся в области изучения основ
-                трёхмерного моделирования и печати для использования в образовательном процессе. В программу входят
-                следующие разделы:
+                Курс направлен на совершенствование профессиональных компетенций
+                обучающихся в области изучения основ трёхмерного моделирования и
+                печати для использования в образовательном процессе. В программу
+                входят следующие разделы:
               </p>
               <p>
-                Курс направлен на совершенствование профессиональных компетенций обучающихся в области изучения основ
-                трёхмерного моделирования и печати для использования в образовательном процессе. В программу входят
-                следующие разделы:
+                Курс направлен на совершенствование профессиональных компетенций
+                обучающихся в области изучения основ трёхмерного моделирования и
+                печати для использования в образовательном процессе. В программу
+                входят следующие разделы:
               </p>
               <p>В программу входят следующие разделы:</p>
               <ol>
-                <li>Моделирование конструкций с использованием технологии SnapCad.</li>
                 <li>
-                  Знакомство с современными научными знаниями по созданию деталей и сборок в среде моделирования
-                  Autodesk Inventor
+                  Моделирование конструкций с использованием технологии SnapCad.
+                </li>
+                <li>
+                  Знакомство с современными научными знаниями по созданию
+                  деталей и сборок в среде моделирования Autodesk Inventor
                 </li>
                 <li>Создание сборки в программе Autodesk Inventor</li>
-                <li>Настройка вывода трёхмерных объектов в формат для трёхмерной печати</li>
+                <li>
+                  Настройка вывода трёхмерных объектов в формат для трёхмерной
+                  печати
+                </li>
               </ol>
               <p>
-                Итоговая аттестация – зачет на основании совокупности выполненных работ, результатов тестирования и
-                итоговой практической работы.
+                Итоговая аттестация – зачет на основании совокупности
+                выполненных работ, результатов тестирования и итоговой
+                практической работы.
               </p>
             </div>
             <div class="course-nav__menu">
@@ -213,7 +215,9 @@ const sliderReview = reactive({
                 <div class="title">Для кого мероприятие</div>
                 <ul class="course-nav__list">
                   <li class="course-nav__list-item">
-                    <span class="course-nav__list-item-wrap">Учитель физики</span>
+                    <span class="course-nav__list-item-wrap"
+                      >Учитель физики</span
+                    >
                   </li>
                 </ul>
               </div>
@@ -233,22 +237,34 @@ const sliderReview = reactive({
           <div class="docs-list --cols3">
             <div class="item-doc">
               <NuxtLink href="#" class="item-doc__wrapper">
-                <span class="b-icon"><SvgIcon name="file-pdf" class="fnone ic24"></SvgIcon></span>
-                <span class="b-name">Инструкция по размещению программ на Портале ДПО</span>
+                <span class="b-icon"
+                  ><SvgIcon name="file-pdf" class="fnone ic24"></SvgIcon
+                ></span>
+                <span class="b-name"
+                  >Инструкция по размещению программ на Портале ДПО</span
+                >
               </NuxtLink>
             </div>
             <!--end item-doc -->
             <div class="item-doc">
               <NuxtLink href="#" class="item-doc__wrapper">
-                <span class="b-icon"><SvgIcon name="file-pdf" class="fnone ic24"></SvgIcon></span>
-                <span class="b-name">Инструкция по размещению программ на Портале ДПО</span>
+                <span class="b-icon"
+                  ><SvgIcon name="file-pdf" class="fnone ic24"></SvgIcon
+                ></span>
+                <span class="b-name"
+                  >Инструкция по размещению программ на Портале ДПО</span
+                >
               </NuxtLink>
             </div>
             <!--end item-doc -->
             <div class="item-doc">
               <NuxtLink href="#" class="item-doc__wrapper">
-                <span class="b-icon"><SvgIcon name="file-doc" class="fnone ic24"></SvgIcon></span>
-                <span class="b-name">Инструкция по размещению программ на Портале ДПО</span>
+                <span class="b-icon"
+                  ><SvgIcon name="file-doc" class="fnone ic24"></SvgIcon
+                ></span>
+                <span class="b-name"
+                  >Инструкция по размещению программ на Портале ДПО</span
+                >
               </NuxtLink>
             </div>
             <!--end item-doc -->
@@ -267,7 +283,13 @@ const sliderReview = reactive({
           >
             <template #item="slotProps">
               <div class="slide-teach">
-                <div class="img"><img :src="slotProps.data.url" :alt="slotProps.data.id" class="w-full rounded" /></div>
+                <div class="img">
+                  <img
+                    :src="slotProps.data.url"
+                    :alt="slotProps.data.id"
+                    class="w-full rounded"
+                  />
+                </div>
                 <div class="title">{{ slotProps.data.title }}</div>
                 <div class="text">{{ slotProps.data.text }}</div>
               </div>
@@ -276,7 +298,10 @@ const sliderReview = reactive({
               <SvgIcon name="ic-arrow-circle-left" class="fnone ic48"></SvgIcon>
             </template>
             <template #nexticon>
-              <SvgIcon name="ic-arrow-circle-right" class="fnone ic48"></SvgIcon>
+              <SvgIcon
+                name="ic-arrow-circle-right"
+                class="fnone ic48"
+              ></SvgIcon>
             </template>
           </Carousel>
         </section>
@@ -288,8 +313,8 @@ const sliderReview = reactive({
               <div class="b-item__wrapper">
                 <div class="num">01</div>
                 <div class="text">
-                  Моделирование конструкций с использованием технологии SnapCad Моделирование конструкций с
-                  использованием технологии SnapCad
+                  Моделирование конструкций с использованием технологии SnapCad
+                  Моделирование конструкций с использованием технологии SnapCad
                 </div>
               </div>
             </div>
@@ -297,21 +322,26 @@ const sliderReview = reactive({
               <div class="b-item__wrapper">
                 <div class="num">02</div>
                 <div class="text">
-                  Знакомство с современными научными знаниями по созданию деталей и сборок в среде моделирования
-                  Autodesk Inventor
+                  Знакомство с современными научными знаниями по созданию
+                  деталей и сборок в среде моделирования Autodesk Inventor
                 </div>
               </div>
             </div>
             <div class="b-item">
               <div class="b-item__wrapper">
                 <div class="num">03</div>
-                <div class="text">Создание сборки в программе Autodesk Inventor</div>
+                <div class="text">
+                  Создание сборки в программе Autodesk Inventor
+                </div>
               </div>
             </div>
             <div class="b-item">
               <div class="b-item__wrapper">
                 <div class="num">04</div>
-                <div class="text">Настройка вывода трёхмерных объектов в формат для трёхмерной печати</div>
+                <div class="text">
+                  Настройка вывода трёхмерных объектов в формат для трёхмерной
+                  печати
+                </div>
               </div>
             </div>
             <div class="b-item">
@@ -335,7 +365,10 @@ const sliderReview = reactive({
             <div class="b-info">
               <div class="card-org">
                 <div class="img"><img src="/img/org-img.png" alt="" /></div>
-                <div class="text">ФГАОУ ВО «Национальный исследовательский технологический университет «МИСиС»</div>
+                <div class="text">
+                  ФГАОУ ВО «Национальный исследовательский технологический
+                  университет «МИСиС»
+                </div>
               </div>
               <div class="course-info__about">
                 <div class="b-item">
@@ -343,11 +376,15 @@ const sliderReview = reactive({
                   <div class="b-text">
                     <div class="text-row">
                       <div class="col-md-50">
-                        <div class="b-icon"><img src="/img/phone.svg" alt="" /></div>
+                        <div class="b-icon">
+                          <img src="/img/phone.svg" alt="" />
+                        </div>
                         +7(495)114-56-28
                       </div>
                       <div class="col-md-50">
-                        <div class="b-icon"><img src="/img/email.svg" alt="" /></div>
+                        <div class="b-icon">
+                          <img src="/img/email.svg" alt="" />
+                        </div>
                         +7(495)114-56-28
                       </div>
                     </div>
@@ -358,17 +395,20 @@ const sliderReview = reactive({
                   <div class="b-text">
                     <div class="text-row">
                       <div class="col-md-50">
-                        <div class="b-icon"><img src="/img/phone.svg" alt="" /></div>
+                        <div class="b-icon">
+                          <img src="/img/phone.svg" alt="" />
+                        </div>
                         +7(495)114-56-28
                       </div>
                       <div class="col-md-50">
-                        <div class="b-icon"><img src="/img/email.svg" alt="" /></div>
+                        <div class="b-icon">
+                          <img src="/img/email.svg" alt="" />
+                        </div>
                         +7(495)114-56-28
                       </div>
                     </div>
                   </div>
                 </div>
-                
               </div>
               <!--end course-info__about-->
             </div>
@@ -382,7 +422,7 @@ const sliderReview = reactive({
         <section class="section">
           <h2 class="h2-title section-title">Вас может заинтересовать</h2>
           <div class="event-list --cols4 --mb0">
-            <div class="event-item" v-for="item in 4">
+            <div v-for="(item, index) in 4" :key="index" class="event-item">
               <EventBox url="a1" />
             </div>
           </div>
