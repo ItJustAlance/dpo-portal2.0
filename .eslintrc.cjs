@@ -16,15 +16,19 @@ module.exports = {
     sourceType: 'module',
   },
   extends: [
-    // 'eslint:recommended',
+    'eslint:recommended',
     '@nuxtjs/eslint-config-typescript',
     'plugin:prettier/recommended',
+    'prettier'
   ],
   rules: {
         'no-console': 'off',
-        'vue/html-comment-content-newline': ['error', {
-      singleline: 'never', // Отключает перенос на новую строку для однострочных комментариев
-      multiline: 'never',  // Отключает перенос на новую строку для многострочных комментариев
-    }],
+    'vue/singleline-html-element-content-newline': 'off', // Отключение переноса для однострочных HTML элементов
+    'vue/multiline-html-element-content-newline': 'off', // Отключение переноса для многострочных HTML элементов
+    'vue/html-comment-content-newline': 'off', // Отключение переноса для комментариев в HTML
+    //     'vue/html-comment-content-newline': ['error', {
+    //   singleline: 'never', // Отключает перенос на новую строку для однострочных комментариев
+    //   multiline: 'never',  // Отключает перенос на новую строку для многострочных комментариев
+    // }],
     },
 };
