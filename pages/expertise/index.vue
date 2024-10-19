@@ -1,23 +1,23 @@
 <script lang="ts" setup>
-import { onMounted } from 'vue'
+import { onMounted } from 'vue';
 
-import { useFiltersStore } from '~/stores/filters'
+import { useFiltersStore } from '~/stores/filters';
 
-const filtersStore = useFiltersStore()
+const filtersStore = useFiltersStore();
 
 onMounted(async () => {
-  await onFilterData()
-})
+  await onFilterData();
+});
 
 const onFilterData = async () => {
-  const result = await filtersStore.initFilters()
-  console.log('onFilterData', result)
+  const result = await filtersStore.initFilters();
+  console.log('onFilterData', result);
   if (result === 'success') {
     // нужно переделать для обновления в store
-    filtersStore.onInitFilter(true)
+    filtersStore.onInitFilter(true);
     // initFilterData.value = true;
   }
-}
+};
 </script>
 
 <template>

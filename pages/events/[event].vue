@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, reactive } from 'vue'
+import { ref, reactive } from 'vue';
 
 // const route = useRoute();
 // const id = route.params.course;
@@ -10,7 +10,7 @@ const breadcrumbList = ref([
     label:
       'Изучение основ трёхмерного моделирования и печати для использования в образовательном процессе',
   },
-])
+]);
 
 const sliderTeach = reactive({
   data: [
@@ -75,7 +75,7 @@ const sliderTeach = reactive({
       circular: true,
     },
   ],
-})
+});
 </script>
 
 <template>
