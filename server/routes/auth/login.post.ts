@@ -1,4 +1,4 @@
-import { getUserByPhone } from "~~/server/models/user";
+import { getUserByPhone } from '~~/server/models/user';
 
 export default defineEventHandler(async (event) => {
   const body = await readBody<{ phone: string; password: string; rememberMe: boolean }>(event);
@@ -7,7 +7,7 @@ export default defineEventHandler(async (event) => {
   if (!phone || !password) {
     throw createError({
       statusCode: 400,
-      message: "Phone address and password are required",
+      message: 'Phone address and password are required',
     });
   }
 
@@ -15,7 +15,7 @@ export default defineEventHandler(async (event) => {
   if (!userWithPassword) {
     throw createError({
       statusCode: 401,
-      message: "Bad credentials",
+      message: 'Bad credentials',
     });
   }
 
@@ -23,7 +23,7 @@ export default defineEventHandler(async (event) => {
   if (!verified) {
     throw createError({
       statusCode: 401,
-      message: "Bad credentials",
+      message: 'Bad credentials',
     });
   }
 
@@ -34,9 +34,9 @@ export default defineEventHandler(async (event) => {
 
   setCookie(event, config.cookieName, signedSession, {
     httpOnly: true,
-    path: "/",
-    sameSite: "strict",
-    secure: process.env.NODE_ENV === "production",
+    path: '/',
+    sameSite: 'strict',
+    secure: process.env.NODE_ENV === 'production',
     expires: rememberMe
       ? new Date(Date.now() + parseInt(config.cookieRememberMeExpires))
       : new Date(Date.now() + parseInt(config.cookieExpires)),

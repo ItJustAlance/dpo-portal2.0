@@ -43,7 +43,7 @@ interface Props {
 }
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const props = withDefaults(defineProps<Props>(), {
-  url: "",
+  url: '',
 });
 // // eslint-disable-next-line @typescript-eslint/no-unused-vars
 // const props = withDefaults(defineProps<Props>(), {

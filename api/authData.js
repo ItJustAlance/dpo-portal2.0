@@ -29,9 +29,9 @@ export function setStateAuthInjectionToApi(injStoreAuth) {
 }
 
 export function getCurrentUserRole() {
-  return storeAuth.state.user ? storeAuth.state.user.roleId : "";
+  return storeAuth.state.user ? storeAuth.state.user.roleId : '';
 }
 
 export function getOrganizationId() {
-  return storeAuth.state.user ? storeAuth.state.user.orgId : "";
+  return storeAuth.state.user ? storeAuth.state.user.orgId : '';
 }

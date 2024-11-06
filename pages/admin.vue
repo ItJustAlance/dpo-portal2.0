@@ -1,17 +1,16 @@
 <script lang="ts" setup>
-import type { User } from "~/types";
-import {getSend} from "@/api/global";
+import type { User } from '~/types';
+import { getSend } from '@/api/global';
 
 definePageMeta({
-  middleware: ["admin-only"],
+  middleware: ['admin-only'],
 });
 
-const { data: users } = await useAsyncData<User[]>("users", () =>
-  $fetch("/api/users", { headers: useRequestHeaders(["cookie"]) as HeadersInit }),
+const { data: users } = await useAsyncData<User[]>('users', () =>
+  $fetch('/api/users', { headers: useRequestHeaders(['cookie']) as HeadersInit }),
 );
 
 const currentUser = useAuthUser();
-
 
 const onTestClick = async () => {
   let params = {
@@ -20,15 +19,15 @@ const onTestClick = async () => {
     ipotekaFee: 2000000,
     ipotekaPayMonth: 37770,
     ipotekaPeriod: 15,
-    phone: 74234234234
-  }
-  const result = await getSend('api/bot/send-application-form', params)
-}
-
+    phone: 74234234234,
+  };
+  const result = await getSend('api/bot/send-application-form', params);
+  console.log('result', result)
+};
 </script>
 
 <template>
-  <div> 
+  <div>
     <PageTitle title="Admin page" />
     <PageDescription description="This page should only be visible if user is connected and has admin role" />
     <PageUser :user="currentUser" />
@@ -46,7 +45,7 @@ const onTestClick = async () => {
           <div v-for="user in users" :key="user.id" class="table-row">
             <TableBodyCell>{{ user.id }}</TableBodyCell>
             <TableBodyCell>{{ user.email }}</TableBodyCell>
-            <TableBodyCell>{{ user.roles.join(", ") }}</TableBodyCell>
+            <TableBodyCell>{{ user.roles.join(', ') }}</TableBodyCell>
           </div>
         </div>
       </div>

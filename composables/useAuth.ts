@@ -1,4 +1,4 @@
-import { useAuthUser } from "./useAuthUser";
+import { useAuthUser } from './useAuthUser';
 
 export const useAuth = () => {
   const authUser = useAuthUser();
@@ -12,9 +12,9 @@ export const useAuth = () => {
   };
 
   const login = async (phone: string, password: string, rememberMe: boolean) => {
-    console.log("dddd");
-    const data = await $fetch("/auth/login", {
-      method: "POST",
+    console.log('dddd');
+    const data = await $fetch('/auth/login', {
+      method: 'POST',
       body: {
         phone,
         password,
@@ -28,8 +28,8 @@ export const useAuth = () => {
   };
 
   const logout = async () => {
-    const data = await $fetch("/auth/logout", {
-      method: "POST",
+    const data = await $fetch('/auth/logout', {
+      method: 'POST',
     });
 
     setUser(data.user);
@@ -38,8 +38,8 @@ export const useAuth = () => {
   const me = async () => {
     if (!authUser.value) {
       try {
-        const data = await $fetch("/auth/me", {
-          headers: useRequestHeaders(["cookie"]) as HeadersInit,
+        const data = await $fetch('/auth/me', {
+          headers: useRequestHeaders(['cookie']) as HeadersInit,
         });
 
         setUser(data.user);

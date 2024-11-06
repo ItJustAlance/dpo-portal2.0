@@ -11,4 +11,4 @@ export interface Filters {
   filters: string[];
 }
 
-export type UserWithoutPassword = Omit<User, "password">;
+export type UserWithoutPassword = Omit<User, 'password'>;

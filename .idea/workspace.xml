@@ -5,9 +5,102 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fbb4658-f32c-45e0-aff1-e2cb3ccfe61f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/sass/pages/_error.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/sass/pages/_legalinfo.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/composables/useAppError.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/error.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/error.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/legalinfo/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/CaretDown.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/error404.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/error404img.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/mountains.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintrc.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.cjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc.cjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/authData.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/authData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/global.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/_app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/_app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/components/_components.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/components/_components.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/elements/_icons.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/elements/_icons.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/elements/_ui.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/elements/_ui.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/generated/_sprite-png.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/generated/_sprite-png.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/generated/_sprite-svg-mono.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/generated/_sprite-svg-mono.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/generated/_sprite-svg.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/generated/_sprite-svg.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/layout/_footer.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/layout/_footer.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/pages/_event.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/pages/_event.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/pages/_pages.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/pages/_pages.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/pages/_subject.sass" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/pages/_subject.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/vendor/_normalize.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/vendor/_normalize.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/vendor/aos/_animations.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/vendor/aos/_animations.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/vendor/aos/_easing.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/vendor/aos/_easing.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/HeaderComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/HeaderComp.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/PageUser.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/PageUser.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/auth/AuthInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/AuthInfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/event/EventBox.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/event/EventBox.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/filter/FilterComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/filter/FilterComp.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/filter/FilterGroup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/filter/FilterGroup.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/filter/FilterMobile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/filter/FilterMobile.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/filter/FilterMobileFull.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/filter/FilterMobileFull.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/footer/FooterComp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/footer/FooterComp.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/news/NewsBox.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/news/NewsBox.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/search/SearchBox.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/search/SearchBox.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/search/SearchNews.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/search/SearchNews.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composables/useAdmin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/composables/useAdmin.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composables/useAuth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/composables/useAuth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composables/useAuthUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/composables/useAuthUser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/admin-only.ts" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/admin-only.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/guest-only.ts" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/guest-only.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/user-only.ts" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/user-only.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/404.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/404.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/competitions/[competition].vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/competitions/[competition].vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/competitions/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/competitions/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses/[course].vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses/[course].vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/events/[event].vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/events/[event].vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/events/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/events/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/expertise/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/expertise/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/guest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/guest.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login__old.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login__old.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/news/[news].vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/[news].vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/news/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/private.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/private.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/programs/[program].vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/programs/[program].vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/programs/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/programs/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/subjects/[subject].vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/subjects/[subject].vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/subjects/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/subjects/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qodana.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/qodana.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/filters/index.post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/filters/index.post.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/users/index.get.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/users/index.get.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/context.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/context.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/filters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/filters.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/api/filters.post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/filters.post.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/auth/login.post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/auth/login.post.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/auth/logout.post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/auth/logout.post.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/utils/cookie.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/utils/cookie.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/utils/password.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/utils/password.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/utils/session.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/utils/session.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stores/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/stores/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stores/counter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/stores/counter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stores/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/stores/data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stores/filters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/stores/filters.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stores/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/stores/theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/nuxt.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/nuxt.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/vitest_basic.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/vitest_basic.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unocss.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/unocss.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/helpers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/tools.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/tools.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vitest.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vitest.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-i18n.options.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vue-i18n.options.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,15 +133,17 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/mail/sites/2024/dpop&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;F:\\mail\\sites\\2024\\dpop\\node_modules\\eslint&quot;,
     &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;F:\\mail\\sites\\2024\\dpop\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
     &quot;ts.external.directory.path&quot;: &quot;F:\\mail\\sites\\2024\\dpop\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -76,7 +171,11 @@
       <workItem from="1728885342942" duration="7907000" />
       <workItem from="1729012730420" duration="20083000" />
       <workItem from="1729244174411" duration="6754000" />
-      <workItem from="1729368494736" duration="95000" />
+      <workItem from="1729368494736" duration="1546000" />
+      <workItem from="1729495303764" duration="11261000" />
+      <workItem from="1730162024779" duration="16152000" />
+      <workItem from="1730472174882" duration="3640000" />
+      <workItem from="1730901828508" duration="2721000" />
     </task>
     <servers />
   </component>

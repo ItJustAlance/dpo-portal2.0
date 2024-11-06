@@ -1,6 +1,11 @@
 .docs-list
   margin: 0 -20px 48px
   display: flex
+  &.--cols2
+    flex-wrap: wrap
+    .item-doc
+      max-width: 50%
+      min-width: 50%
   &.--cols3
     .item-doc
       max-width: 33.333%
@@ -9,10 +14,21 @@
     border-top: 1px solid #F0F0F0
     border-bottom: 1px solid #F0F0F0
     padding: 32px 0
+  &.--list-small
+    margin-left: -8px
+    margin-right: -8px
+    margin-bottom: 0
+    .item-doc
+      padding-left: 8px
+      padding-right: 8px
+      padding-bottom: 16px
 .item-doc
   max-width: 50%
   min-width: 50%
   padding: 0 20px
+  &.--white
+    .item-doc__wrapper
+      background: #fff
   &__wrapper
     padding: 24px
     display: flex

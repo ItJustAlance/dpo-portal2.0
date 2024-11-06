@@ -126,11 +126,11 @@
 </template>
 
 <script>
-import clickOutSide from "@mahdikhashan/vue3-click-outside";
-import { useAuthUser } from "@/composables/useAuthUser";
-import { useAuth } from "@/composables/useAuth";
+import clickOutSide from '@mahdikhashan/vue3-click-outside';
+import { useAuthUser } from '@/composables/useAuthUser';
+import { useAuth } from '@/composables/useAuth';
 export default {
-  name: "AuthInfo",
+  name: 'AuthInfo',
   components: {},
   directives: {
     clickOutSide,
@@ -146,7 +146,7 @@ export default {
   computed: {
     useAuth() {
       const authUser = useAuthUser();
-      console.log("useAuthUser", authUser);
+      console.log('useAuthUser', authUser);
       return authUser;
     },
   },
@@ -160,7 +160,7 @@ export default {
         this.user.pending = true;
         const auth = useAuth();
         await auth.logout();
-        await navigateTo("/");
+        await navigateTo('/');
       } catch (error) {
         console.error(error);
       } finally {
@@ -168,7 +168,7 @@ export default {
       }
     },
     hide() {
-      console.log("hidee");
+      console.log('hidee');
       this.show = false;
     },
   },

@@ -5,6 +5,6 @@ export const useAdmin = () => {
     if (!authUser.value) return false;
     // if (!authUser.value) return true;
 
-    return authUser.value.roles.includes("ADMIN");
+    return authUser.value.roles.includes('ADMIN');
   });
 };

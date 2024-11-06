@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import { storeToRefs } from "pinia";
-import { useAuthStore } from "@/stores/auth";
+import { storeToRefs } from 'pinia';
+import { useAuthStore } from '@/stores/auth';
 
 definePageMeta({
-  middleware: ["guest-only"],
+  middleware: ['guest-only'],
   // layout: false,
 });
 
@@ -11,11 +11,11 @@ definePageMeta({
 
 const form = reactive({
   data: {
-    phone: "71111111111",
-    password: "password",
+    phone: '71111111111',
+    password: 'password',
     rememberMe: false,
   },
-  error: "",
+  error: '',
   pending: false,
 });
 
@@ -27,8 +27,8 @@ const { authenticated } = storeToRefs(useAuthStore()); // make authenticated sta
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const user = ref({
-  username: "kminchelle",
-  password: "0lelplR",
+  username: 'kminchelle',
+  password: '0lelplR',
 });
 const router = useRouter();
 
@@ -37,7 +37,7 @@ const onLoginClick = async () => {
   const result = await authenticateUser(form);
   // redirect to homepage if user is authenticated
   if (authenticated) {
-    router.push("/");
+    router.push('/');
   }
 };
 

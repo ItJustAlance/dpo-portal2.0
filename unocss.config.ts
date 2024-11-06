@@ -6,15 +6,15 @@ import {
   presetWebFonts,
   transformerDirectives,
   transformerVariantGroup,
-} from "unocss";
-import { readFile } from "node:fs/promises";
+} from 'unocss';
+import { readFile } from 'node:fs/promises';
 
 export default defineConfig({
   shortcuts: [],
   preflights: [
     {
-      getCSS: () => readFile("./node_modules/@unocss/reset/tailwind.css", "utf-8"),
-      layer: "preflights",
+      getCSS: () => readFile('./node_modules/@unocss/reset/tailwind.css', 'utf-8'),
+      layer: 'preflights',
     },
   ],
   presets: [
@@ -25,9 +25,9 @@ export default defineConfig({
     presetTypography(),
     presetWebFonts({
       fonts: {
-        sans: "DM Sans",
-        serif: "DM Serif Display",
-        mono: "DM Mono",
+        sans: 'DM Sans',
+        serif: 'DM Serif Display',
+        mono: 'DM Mono',
       },
     }),
   ],

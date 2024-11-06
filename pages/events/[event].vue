@@ -7,8 +7,7 @@ import { ref, reactive } from 'vue';
 const breadcrumbList = ref([
   { label: 'Курсы', route: '/' },
   {
-    label:
-      'Изучение основ трёхмерного моделирования и печати для использования в образовательном процессе',
+    label: 'Изучение основ трёхмерного моделирования и печати для использования в образовательном процессе',
   },
 ]);
 
@@ -82,18 +81,8 @@ const sliderTeach = reactive({
   <div class="all">
     <Breadcrumb :model="breadcrumbList">
       <template #item="{ item, props }">
-        <NuxtLink
-          v-if="item.route"
-          v-slot="{ navigate }"
-          :to="item.route"
-          custom
-        >
-          <a
-            class="bread-item"
-            :href="item.route"
-            v-bind="props.action"
-            @click="navigate"
-          >
+        <NuxtLink v-if="item.route" v-slot="{ navigate }" :to="item.route" custom>
+          <a class="bread-item" :href="item.route" v-bind="props.action" @click="navigate">
             <span>{{ item.label }}</span>
           </a>
         </NuxtLink>
@@ -114,14 +103,11 @@ const sliderTeach = reactive({
                   <div class="mini-info__ico">
                     <SvgIcon name="bookmarks" class="fnone ic16"></SvgIcon>
                   </div>
-                  <div class="mini-info__text">
-                    Университетская среда для учителей
-                  </div>
+                  <div class="mini-info__text">Университетская среда для учителей</div>
                 </div>
               </div>
               <h1 class="h1-title">
-                Образование Древнерусского государства и формирование его
-                территорий в IX - н. XII вв.
+                Образование Древнерусского государства и формирование его территорий в IX - н. XII вв.
               </h1>
               <div class="course-info__about">
                 <div class="b-item">
@@ -178,36 +164,28 @@ const sliderTeach = reactive({
           <div class="course-nav-box">
             <div class="course-nav__text article">
               <p>
-                Курс направлен на совершенствование профессиональных компетенций
-                обучающихся в области изучения основ трёхмерного моделирования и
-                печати для использования в образовательном процессе. В программу
-                входят следующие разделы:
+                Курс направлен на совершенствование профессиональных компетенций обучающихся в области изучения основ
+                трёхмерного моделирования и печати для использования в образовательном процессе. В программу входят
+                следующие разделы:
               </p>
               <p>
-                Курс направлен на совершенствование профессиональных компетенций
-                обучающихся в области изучения основ трёхмерного моделирования и
-                печати для использования в образовательном процессе. В программу
-                входят следующие разделы:
+                Курс направлен на совершенствование профессиональных компетенций обучающихся в области изучения основ
+                трёхмерного моделирования и печати для использования в образовательном процессе. В программу входят
+                следующие разделы:
               </p>
               <p>В программу входят следующие разделы:</p>
               <ol>
+                <li>Моделирование конструкций с использованием технологии SnapCad.</li>
                 <li>
-                  Моделирование конструкций с использованием технологии SnapCad.
-                </li>
-                <li>
-                  Знакомство с современными научными знаниями по созданию
-                  деталей и сборок в среде моделирования Autodesk Inventor
+                  Знакомство с современными научными знаниями по созданию деталей и сборок в среде моделирования
+                  Autodesk Inventor
                 </li>
                 <li>Создание сборки в программе Autodesk Inventor</li>
-                <li>
-                  Настройка вывода трёхмерных объектов в формат для трёхмерной
-                  печати
-                </li>
+                <li>Настройка вывода трёхмерных объектов в формат для трёхмерной печати</li>
               </ol>
               <p>
-                Итоговая аттестация – зачет на основании совокупности
-                выполненных работ, результатов тестирования и итоговой
-                практической работы.
+                Итоговая аттестация – зачет на основании совокупности выполненных работ, результатов тестирования и
+                итоговой практической работы.
               </p>
             </div>
             <div class="course-nav__menu">
@@ -215,9 +193,7 @@ const sliderTeach = reactive({
                 <div class="title">Для кого мероприятие</div>
                 <ul class="course-nav__list">
                   <li class="course-nav__list-item">
-                    <span class="course-nav__list-item-wrap"
-                      >Учитель физики</span
-                    >
+                    <span class="course-nav__list-item-wrap">Учитель физики</span>
                   </li>
                 </ul>
               </div>
@@ -237,34 +213,22 @@ const sliderTeach = reactive({
           <div class="docs-list --cols3">
             <div class="item-doc">
               <NuxtLink href="#" class="item-doc__wrapper">
-                <span class="b-icon"
-                  ><SvgIcon name="file-pdf" class="fnone ic24"></SvgIcon
-                ></span>
-                <span class="b-name"
-                  >Инструкция по размещению программ на Портале ДПО</span
-                >
+                <span class="b-icon"><SvgIcon name="file-pdf" class="fnone ic24"></SvgIcon></span>
+                <span class="b-name">Инструкция по размещению программ на Портале ДПО</span>
               </NuxtLink>
             </div>
             <!--end item-doc -->
             <div class="item-doc">
               <NuxtLink href="#" class="item-doc__wrapper">
-                <span class="b-icon"
-                  ><SvgIcon name="file-pdf" class="fnone ic24"></SvgIcon
-                ></span>
-                <span class="b-name"
-                  >Инструкция по размещению программ на Портале ДПО</span
-                >
+                <span class="b-icon"><SvgIcon name="file-pdf" class="fnone ic24"></SvgIcon></span>
+                <span class="b-name">Инструкция по размещению программ на Портале ДПО</span>
               </NuxtLink>
             </div>
             <!--end item-doc -->
             <div class="item-doc">
               <NuxtLink href="#" class="item-doc__wrapper">
-                <span class="b-icon"
-                  ><SvgIcon name="file-doc" class="fnone ic24"></SvgIcon
-                ></span>
-                <span class="b-name"
-                  >Инструкция по размещению программ на Портале ДПО</span
-                >
+                <span class="b-icon"><SvgIcon name="file-doc" class="fnone ic24"></SvgIcon></span>
+                <span class="b-name">Инструкция по размещению программ на Портале ДПО</span>
               </NuxtLink>
             </div>
             <!--end item-doc -->
@@ -284,11 +248,7 @@ const sliderTeach = reactive({
             <template #item="slotProps">
               <div class="slide-teach">
                 <div class="img">
-                  <img
-                    :src="slotProps.data.url"
-                    :alt="slotProps.data.id"
-                    class="w-full rounded"
-                  />
+                  <img :src="slotProps.data.url" :alt="slotProps.data.id" class="w-full rounded" />
                 </div>
                 <div class="title">{{ slotProps.data.title }}</div>
                 <div class="text">{{ slotProps.data.text }}</div>
@@ -298,10 +258,7 @@ const sliderTeach = reactive({
               <SvgIcon name="ic-arrow-circle-left" class="fnone ic48"></SvgIcon>
             </template>
             <template #nexticon>
-              <SvgIcon
-                name="ic-arrow-circle-right"
-                class="fnone ic48"
-              ></SvgIcon>
+              <SvgIcon name="ic-arrow-circle-right" class="fnone ic48"></SvgIcon>
             </template>
           </Carousel>
         </section>
@@ -313,8 +270,8 @@ const sliderTeach = reactive({
               <div class="b-item__wrapper">
                 <div class="num">01</div>
                 <div class="text">
-                  Моделирование конструкций с использованием технологии SnapCad
-                  Моделирование конструкций с использованием технологии SnapCad
+                  Моделирование конструкций с использованием технологии SnapCad Моделирование конструкций с
+                  использованием технологии SnapCad
                 </div>
               </div>
             </div>
@@ -322,26 +279,21 @@ const sliderTeach = reactive({
               <div class="b-item__wrapper">
                 <div class="num">02</div>
                 <div class="text">
-                  Знакомство с современными научными знаниями по созданию
-                  деталей и сборок в среде моделирования Autodesk Inventor
+                  Знакомство с современными научными знаниями по созданию деталей и сборок в среде моделирования
+                  Autodesk Inventor
                 </div>
               </div>
             </div>
             <div class="b-item">
               <div class="b-item__wrapper">
                 <div class="num">03</div>
-                <div class="text">
-                  Создание сборки в программе Autodesk Inventor
-                </div>
+                <div class="text">Создание сборки в программе Autodesk Inventor</div>
               </div>
             </div>
             <div class="b-item">
               <div class="b-item__wrapper">
                 <div class="num">04</div>
-                <div class="text">
-                  Настройка вывода трёхмерных объектов в формат для трёхмерной
-                  печати
-                </div>
+                <div class="text">Настройка вывода трёхмерных объектов в формат для трёхмерной печати</div>
               </div>
             </div>
             <div class="b-item">
@@ -365,10 +317,7 @@ const sliderTeach = reactive({
             <div class="b-info">
               <div class="card-org">
                 <div class="img"><img src="/img/org-img.png" alt="" /></div>
-                <div class="text">
-                  ФГАОУ ВО «Национальный исследовательский технологический
-                  университет «МИСиС»
-                </div>
+                <div class="text">ФГАОУ ВО «Национальный исследовательский технологический университет «МИСиС»</div>
               </div>
               <div class="course-info__about">
                 <div class="b-item">

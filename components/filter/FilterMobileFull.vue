@@ -1,7 +1,7 @@
 <template>
   <div class="filter-mobile__wrapper">
     <div class="filter-mobile__header">
-      <div class="filter-close" >
+      <div class="filter-close">
         <SvgIcon name="menu-close" class="ic42"></SvgIcon>
       </div>
     </div>

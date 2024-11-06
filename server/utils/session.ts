@@ -1,5 +1,5 @@
-import type { H3Event } from "h3";
-import { getUserById } from "~~/server/models/user";
+import type { H3Event } from 'h3';
+import { getUserById } from '~~/server/models/user';
 
 export async function getUserFromSession(event: H3Event) {
   const config = useRuntimeConfig(event);

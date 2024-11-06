@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 definePageMeta({
-  middleware: ["user-only"],
+  middleware: ['user-only'],
 });
 
 const currentUser = useAuthUser();

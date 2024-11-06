@@ -88,9 +88,9 @@
 </template>
 
 <script setup lang="ts">
-import clickOutSide from "@mahdikhashan/vue3-click-outside";
+import clickOutSide from '@mahdikhashan/vue3-click-outside';
 
-import { ref } from "vue";
+import { ref } from 'vue';
 
 interface Props {
   isSpecial?: boolean;
@@ -100,14 +100,14 @@ interface Props {
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const props = withDefaults(defineProps<Props>(), {
   isSpecial: false,
-  titleTags: "",
-  placeholder: "Название курса, шифр, направление, специальность",
+  titleTags: '',
+  placeholder: 'Название курса, шифр, направление, специальность',
 });
 
 const vClickOutSide = clickOutSide;
 
 // Реактивная переменная для хранения текста поиска
-const searchQuery = ref("");
+const searchQuery = ref('');
 
 // Показывать результаты только при вводе 3+ символов
 const showResults = ref(false);
@@ -124,7 +124,7 @@ const handleInput = () => {
 
 // Очистка поиска
 const clearSearch = () => {
-  searchQuery.value = "";
+  searchQuery.value = '';
   showResults.value = false;
 };
 </script>

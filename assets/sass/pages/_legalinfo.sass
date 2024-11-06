@@ -1,0 +1,47 @@
+.menu-aside
+  min-width: 300px
+  max-width: 300px
+  .menu-item
+    &__title
+      color: $clrGrey90
+      padding: 8px 0
+      border-bottom: 1px solid $clrPrimaryMain
+      font-size: 20px
+      font-weight: 700
+      position: relative
+      padding-right: 24px
+      cursor: pointer
+      &.active, &:hover
+        color: $clrPrimaryMain
+      .arr
+        position: absolute
+        top: 14px
+        right: 0
+    & + .menu-item
+      margin-top: 24px
+  .submenu
+    padding-top: 24px
+    margin: 0
+    list-style: none
+    &__item
+      cursor: pointer
+      &.active-sub, &:hover
+        color: $clrPrimaryMain
+      & + .submenu__item
+        margin-top: 12px
+        
+  & + .content-body
+    padding-left: 40px
+
+.content-legal
+  border-radius: 16px
+  background: $clrGrey20
+  padding: 24px
+  color: $clrGrey80
+  font-size: 18px
+  .h5-title
+    padding-bottom: 24px
+    color: #000
+  .b-text
+    & + .docs-list
+      margin-top: 24px

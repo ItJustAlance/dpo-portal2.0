@@ -120,9 +120,9 @@
 </template>
 
 <script setup lang="ts">
-import clickOutSide from "@mahdikhashan/vue3-click-outside";
+import clickOutSide from '@mahdikhashan/vue3-click-outside';
 
-import { ref } from "vue";
+import { ref } from 'vue';
 
 interface Props {
   isMore?: boolean;
@@ -140,7 +140,7 @@ const props = withDefaults(defineProps<Props>(), {
 const vClickOutSide = clickOutSide;
 
 // Реактивная переменная для хранения текста поиска
-const searchQuery = ref("");
+const searchQuery = ref('');
 
 // Показывать результаты только при вводе 3+ символов
 const showResults = ref(false);
@@ -157,7 +157,7 @@ const handleInput = () => {
 
 // Очистка поиска
 const clearSearch = () => {
-  searchQuery.value = "";
+  searchQuery.value = '';
   showResults.value = false;
 };
 </script>

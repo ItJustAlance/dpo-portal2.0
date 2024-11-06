@@ -1,4 +1,4 @@
-import Aura from "@primevue/themes/aura";
+import Aura from '@primevue/themes/aura';
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 const ONE_DAY = 60 * 60 * 24 * 1000;
@@ -9,15 +9,15 @@ export default defineNuxtConfig({
   ssr: true,
 
   runtimeConfig: {
-    cookieName: "__session",
-    cookieSecret: "secret",
+    cookieName: '__session',
+    cookieSecret: 'secret',
     cookieExpires: ONE_DAY.toString(),
     cookieRememberMeExpires: ONE_WEEK.toString(),
   },
 
-  modules: ["@primevue/nuxt-module", "@pinia/nuxt", "@nuxtjs/i18n", "@nuxt/content", "@vueuse/nuxt", "nuxt-icons"],
+  modules: ['@primevue/nuxt-module', '@pinia/nuxt', '@nuxtjs/i18n', '@nuxt/content', '@vueuse/nuxt', 'nuxt-icons'],
 
-  css: ["@/assets/sass/_app.scss"],
+  css: ['@/assets/sass/_app.scss'],
 
   vite: {
     plugins: [],
@@ -35,32 +35,32 @@ export default defineNuxtConfig({
   },
 
   components: {
-    dirs: ["~/components"],
+    dirs: ['~/components'],
   },
 
   content: {
     highlight: {
-      theme: "one-dark-pro",
-      preload: ["json", "js", "ts", "html", "css", "vue"],
+      theme: 'one-dark-pro',
+      preload: ['json', 'js', 'ts', 'html', 'css', 'vue'],
     },
     // Options
   },
 
   i18n: {
     lazy: true,
-    langDir: "locales",
-    defaultLocale: "en",
-    strategy: "no_prefix",
+    langDir: 'locales',
+    defaultLocale: 'en',
+    strategy: 'no_prefix',
     locales: [
-      { code: "en", file: "en.json", name: "English" },
-      { code: "de", file: "de.json", name: "German" },
+      { code: 'en', file: 'en.json', name: 'English' },
+      { code: 'de', file: 'de.json', name: 'German' },
     ],
-    vueI18n: "./vue-i18n.options.ts",
+    vueI18n: './vue-i18n.options.ts',
   },
 
   primevue: {
     components: {
-      include: ["Checkbox", "Radio", "InputOtp"],
+      include: ['Checkbox', 'Radio', 'InputOtp'],
     },
     options: {
       // ripple: true,
@@ -75,7 +75,7 @@ export default defineNuxtConfig({
   },
 
   build: {
-    transpile: ["nuxt", "primevue"],
+    transpile: ['nuxt', 'primevue'],
     // extend(config, { isClient }) {
     //   // Extend only webpack config for client-bundle
     //   if (isClient) {
@@ -90,5 +90,5 @@ export default defineNuxtConfig({
     server: true,
   },
 
-  compatibilityDate: "2024-07-21",
+  compatibilityDate: '2024-07-21',
 });

@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted } from 'vue';
 // import {onMounted} from "vue/dist/vue";
 
-import { storeToRefs } from "pinia";
-import { useFiltersStore } from "~/stores/filters";
+import { storeToRefs } from 'pinia';
+import { useFiltersStore } from '~/stores/filters';
 
 const filtersStore = useFiltersStore();
 const { selectedFilters, filters } = storeToRefs(filtersStore); // make filters state reactive
@@ -18,7 +18,7 @@ onMounted(async () => {
 });
 
 function initData() {
-  console.log("filters", filters.value);
+  console.log('filters', filters.value);
   filterGroups.value = filters.value;
 }
 
@@ -28,16 +28,16 @@ const initFilterUpdate = (filter) => {
   }
 };
 function updateFilterData(filterCategory, id, value) {
-  console.log("FilterComp updateFilterData вызван сa:", filterCategory, "1", id, "2", value);
+  console.log('FilterComp updateFilterData вызван сa:', filterCategory, '1', id, '2', value);
   isLoadData.value = true;
   const filterData = filterResultData.value.find((filter) => filter.id === value.id);
-  console.log("aasd filterData", filterData);
+  console.log('aasd filterData', filterData);
 
   // if (filterData) {
   if (value.value) {
     // Добавляем фильтр в filterResultData, если он там еще не существует
     if (!filterResultData.value.includes(value)) {
-      console.log("filterResultData");
+      console.log('filterResultData');
       filterResultData.value.push(value);
     }
   } else {
@@ -49,8 +49,6 @@ function updateFilterData(filterCategory, id, value) {
   }
   filtersStore.onSelectedFilters(filterResultData.value);
   isLoadData.value = false;
-
- 
 }
 </script>
 

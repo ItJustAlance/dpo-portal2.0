@@ -30,7 +30,7 @@
       </div>
       <div v-if="showToggle && filters.length > 4 && searchQuery === ''" class="row-toggle">
         <button class="btn btn--inline btn-toggle" @click="showAllFilters = !showAllFilters">
-          <span class="btn-label">{{ showAllFilters ? "Скрыть" : `Еще ${filters.length} направлений` }}</span>
+          <span class="btn-label">{{ showAllFilters ? 'Скрыть' : `Еще ${filters.length} направлений` }}</span>
           <SvgIcon name="caret-circle-down" class="fnone ic24"></SvgIcon>
         </button>
       </div>
@@ -60,17 +60,17 @@
 </template>
 
 <script>
-import { ref, computed, onMounted, watch } from "vue";
+import { ref, computed, onMounted, watch } from 'vue';
 
 export default {
   props: {
     title: {
       type: String,
-      default: "",
+      default: '',
     },
     filterName: {
       type: String,
-      default: "",
+      default: '',
     },
     filters: {
       type: Array,
@@ -97,27 +97,27 @@ export default {
       default: () => [],
     },
   },
-  emits: ["update-filter-data", "init-filter-update"],
+  emits: ['update-filter-data', 'init-filter-update'],
   setup(props, { emit }) {
     const isShow = ref(false);
     const sliderDataResult = ref([2, 400]);
-    const searchQuery = ref("");
+    const searchQuery = ref('');
     const showAllFilters = ref(false);
     const initFilterResultData = () => {
-      console.log("props.filters", props.filters);
+      console.log('props.filters', props.filters);
       props.filters.forEach((filter) => {
         if (filter.value) {
-          emit("init-filter-update", filter);
+          emit('init-filter-update', filter);
         }
       });
-      console.log("props.sliderData", props.sliderData);
+      console.log('props.sliderData', props.sliderData);
       // передача данных слайдеру
       if (props.sliderData) {
-        const sliderTo = props.filters.find((el) => el.pos === "to");
-        const sliderFrom = props.filters.find((el) => el.pos === "from");
-        console.log("sliderTo", sliderTo);
+        const sliderTo = props.filters.find((el) => el.pos === 'to');
+        const sliderFrom = props.filters.find((el) => el.pos === 'from');
+        console.log('sliderTo', sliderTo);
         sliderDataResult.value = [sliderTo.value, sliderFrom.value];
-        console.log("sliderDataResult", sliderDataResult.value);
+        console.log('sliderDataResult', sliderDataResult.value);
       } else {
         sliderDataResult.value = [2, 400]; // default value
       }
@@ -143,19 +143,19 @@ export default {
       const filter = props.filters.find((filter) => filter.id === id);
       if (filter) {
         filter.value = value;
-        emit("update-filter-data", props.filterResultData, props.filterName, filter);
+        emit('update-filter-data', props.filterResultData, props.filterName, filter);
       }
     };
 
     const onShow = () => {
-      console.log("onShow");
+      console.log('onShow');
       isShow.value = !isShow.value;
     };
 
     watch(sliderDataResult, (newValue) => {
-      const sliderTo = props.filters.find((el) => el.pos === "to");
-      const sliderFrom = props.filters.find((el) => el.pos === "from");
-      console.log("watch sliderTo", sliderTo, sliderFrom);
+      const sliderTo = props.filters.find((el) => el.pos === 'to');
+      const sliderFrom = props.filters.find((el) => el.pos === 'from');
+      console.log('watch sliderTo', sliderTo, sliderFrom);
       // const sliderDataObject = {
       //   id: sliderTo?.id,
       //   name: sliderTo?.name,

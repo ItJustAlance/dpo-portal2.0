@@ -1,14 +1,14 @@
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref } from 'vue';
 
 // const route = useRoute();
 // const id = route.params.course;
 
 const breadcrumbList = ref([
-  { label: "Конкурсы", route: "/" },
+  { label: 'Конкурсы', route: '/' },
   {
     label:
-      "Конкурс на присуждение премий лучшим учителям за достижения в педагогической деятельности в городе Москве в 2023 году",
+      'Конкурс на присуждение премий лучшим учителям за достижения в педагогической деятельности в городе Москве в 2023 году',
   },
 ]);
 </script>
@@ -48,7 +48,9 @@ const breadcrumbList = ref([
             <div class="progress-scroll" style="width: 35%"></div>
             <div class="progress-list">
               <div class="progress-circ active">
-                <div class="icon rocket"><SvgIcon name="rocket-launch" class="fnone ic24" /></div>
+                <div class="icon rocket">
+                  <SvgIcon name="rocket-launch" class="fnone ic24" />
+                </div>
                 <div class="date"><div class="txt">10.07.2023</div></div>
                 <div class="text">
                   <div class="txt">
@@ -59,7 +61,9 @@ const breadcrumbList = ref([
               </div>
               <!--end progress-circ -->
               <div class="progress-circ active">
-                <div class="icon"><SvgIcon name="check-circle" class="fnone ic24" /></div>
+                <div class="icon">
+                  <SvgIcon name="check-circle" class="fnone ic24" />
+                </div>
                 <div class="date"><div class="txt">18.07.2023</div></div>
                 <div class="text">
                   <div class="txt">
@@ -70,7 +74,9 @@ const breadcrumbList = ref([
               </div>
               <!--end progress-circ -->
               <div class="progress-circ">
-                <div class="icon"><SvgIcon name="check-circle" class="fnone ic24" /></div>
+                <div class="icon">
+                  <SvgIcon name="check-circle" class="fnone ic24" />
+                </div>
                 <div class="date"><div class="txt">30.07.2023</div></div>
                 <div class="text">
                   <div class="txt">
@@ -80,7 +86,9 @@ const breadcrumbList = ref([
               </div>
               <!--end progress-circ -->
               <div class="progress-circ">
-                <div class="icon"><SvgIcon name="flag-checkered" class="fnone ic24" /></div>
+                <div class="icon">
+                  <SvgIcon name="flag-checkered" class="fnone ic24" />
+                </div>
                 <div class="date"><div class="txt">31.07.2023</div></div>
                 <div class="text">
                   <div class="txt">

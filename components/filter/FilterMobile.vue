@@ -38,8 +38,8 @@
 
 <script>
 //import { ref, computed, onMounted, watch } from "vue";
-import { storeToRefs } from "pinia";
-import { useFiltersStore } from "@/stores/filters";
+import { storeToRefs } from 'pinia';
+import { useFiltersStore } from '@/stores/filters';
 
 export default {
   props: {},
@@ -47,10 +47,10 @@ export default {
   setup(props) {
     const filtersStore = useFiltersStore();
     const { showFilters } = storeToRefs(filtersStore); // make filters state reactive
-    console.log('showFilters', showFilters)
+    console.log('showFilters', showFilters);
     function onClose(value) {
       filtersStore.onShowFilter(value);
-      document.body.classList.toggle("lock", false);
+      document.body.classList.toggle('lock', false);
     }
 
     return {

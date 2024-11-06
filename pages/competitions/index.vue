@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted } from 'vue';
 // import { useAuthStore } from "@/stores/auth";
-import { storeToRefs } from "pinia";
-import { useFiltersStore } from "~/stores/filters";
+import { storeToRefs } from 'pinia';
+import { useFiltersStore } from '~/stores/filters';
 
 // const currentUser = useAuthUser();
 
@@ -11,11 +11,11 @@ const selectedCity = ref();
 const filterPopular = ref(false);
 const filterNew = ref(false);
 const cities = ref([
-  { name: "New York", code: "NY" },
-  { name: "Rome", code: "RM" },
-  { name: "London", code: "LDN" },
-  { name: "Istanbul", code: "IST" },
-  { name: "Paris", code: "PRS" },
+  { name: 'New York', code: 'NY' },
+  { name: 'Rome', code: 'RM' },
+  { name: 'London', code: 'LDN' },
+  { name: 'Istanbul', code: 'IST' },
+  { name: 'Paris', code: 'PRS' },
 ]);
 
 const filtersStore = useFiltersStore();
@@ -29,8 +29,8 @@ onMounted(async () => {
 
 const onFilterData = async () => {
   const result = await filtersStore.initFilters();
-  console.log("onFilterData", result);
-  if (result === "success") {
+  console.log('onFilterData', result);
+  if (result === 'success') {
     // нужно переделать для обновления в store
     filtersStore.onInitFilter(true);
     // initFilterData.value = true;

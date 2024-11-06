@@ -1,5 +1,5 @@
-import { getRefreshTokenId } from "./authData";
-import { apiUrl, axios } from "@/api/api.js";
+import { getRefreshTokenId } from './authData';
+import { apiUrl, axios } from '@/api/api.js';
 
 export async function getSend(url, params) {
   try {
@@ -13,7 +13,7 @@ export async function getSend(url, params) {
     });
     return result.data;
   } catch (error) {
-    console.log("error", error);
+    console.log('error', error);
     /** Кидаем на логин, если токен не получен */
     // await router.push({ name: "login" }).catch(() => {});
   }

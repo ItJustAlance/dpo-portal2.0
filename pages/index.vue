@@ -3,10 +3,10 @@
 
 const sliderMain = reactive({
   data: [
-    { id: 1, url: "/img/banner.png" },
-    { id: 2, url: "/img/banner.png" },
-    { id: 3, url: "/img/banner.png" },
-    { id: 4, url: "/img/banner.png" },
+    { id: 1, url: '/img/banner.png' },
+    { id: 2, url: '/img/banner.png' },
+    { id: 3, url: '/img/banner.png' },
+    { id: 4, url: '/img/banner.png' },
   ],
 });
 

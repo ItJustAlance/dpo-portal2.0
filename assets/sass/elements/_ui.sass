@@ -193,6 +193,7 @@
     padding: 0
     font-size: 20px
     color: $clrGrey100
+    font-weight: 700
     &:hover
       background: none !important
       color: $clrGrey100 !important
@@ -216,10 +217,61 @@
         color: $clrGrey100 !important
     &+.p-accordionpanel
       margin-top: 24px
-    
+
+      
     
 /*** PRIMEVUE
+
+.arr-expand-icon
+  background: url(/img/CaretDown.svg) 0 0 no-repeat
+  transform: rotate(180deg)
+  width: 24px
+  height: 24px
+.arr-collapse-icon
+  background: url(/img/CaretDown.svg) 0 0 no-repeat
+  width: 24px
+  height: 24px
 .over
+  .p-tablist-active-bar
+    display: none
+  .p-tablist-tab-list
+    border: none
+    gap: 40px
+  .p-tablist-content
+    max-width: 100%
+    flex: 0 0 100%
+  .p-tab
+    white-space: normal
+    flex: 1
+    background: $clrGrey20
+    color: $clrGrey90
+    text-align: center
+    border-radius: 24px
+    padding: 24px
+    border: none
+    font-size: 16px
+    font-weight: 700
+    position: relative
+    &:before
+      content: ""
+      width: 0
+      height: 0
+      border-left: 12px solid transparent
+      border-right: 12px solid transparent
+      border-top: 12px solid $clrPrimaryMain
+      position: absolute
+      top: 100%
+      left: calc(50% - 6px)
+      opacity: 0
+  .tabs-box
+    padding-top: 35px
+  .p-tab-active
+    background: $clrPrimaryMain
+    color: #fff
+    &:before
+      opacity: 1
+    
+    
   .p-datatable
     font-weight: 300
     font-family: $baseFont

@@ -1,4 +1,4 @@
-import { getUsers, isAdmin } from "~~/server/models/user";
+import { getUsers, isAdmin } from '~~/server/models/user';
 
 export default defineEventHandler(async (event) => {
   if (!isAdmin(event.context.user)) {

@@ -1,16 +1,5 @@
-// module.exports = {
-//   root: true,
-//   plugins: ['import'],
-//   extends: ['plugin:prettier/recommended', 
-//     // 'plugin:import/recommended'
-//     "plugin:import/errors",
-//     "plugin:import/warnings",
-//     "plugin:import/typescript",
-//   ],
-// };
-
 module.exports = {
-  //root: true,
+  root: true,
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
@@ -18,17 +7,40 @@ module.exports = {
   extends: [
     'eslint:recommended',
     '@nuxtjs/eslint-config-typescript',
-    'plugin:prettier/recommended',
-    'prettier'
+    'plugin:prettier/recommended', // Включает интеграцию Prettier с ESLint
+    'prettier', // Отключает конфликтующие правила ESLint, чтобы Prettier мог форматировать код
+  ],
+  plugins: [
+    'import', // Плагин для управления импортами
+    'vue', // Поддержка Vue.js
+    'prettier', // Плагин Prettier для применения правил форматирования как ESLint-правил
   ],
   rules: {
-        'no-console': 'off',
-    'vue/singleline-html-element-content-newline': 'off', // Отключение переноса для однострочных HTML элементов
-    'vue/multiline-html-element-content-newline': 'off', // Отключение переноса для многострочных HTML элементов
-    'vue/html-comment-content-newline': 'off', // Отключение переноса для комментариев в HTML
-    //     'vue/html-comment-content-newline': ['error', {
-    //   singleline: 'never', // Отключает перенос на новую строку для однострочных комментариев
-    //   multiline: 'never',  // Отключает перенос на новую строку для многострочных комментариев
-    // }],
-    },
+    'prettier/prettier': [
+      'error', // Отображает ошибки для нарушений правил Prettier
+      {
+        semi: true, // Использовать точку с запятой в конце строки
+        singleQuote: true, // Использовать одинарные кавычки
+        trailingComma: 'all', // Запятые в конце всех объектов и массивов
+        printWidth: 120, // Максимальная ширина строки
+        tabWidth: 2, // Ширина табуляции — 2 пробела
+        useTabs: false, // Использовать пробелы вместо табуляции
+        bracketSpacing: true, // Пробелы внутри фигурных скобок { foo: bar }
+        endOfLine: 'crlf', // Устанавливаем 'lf' как символ конца строки
+      },
+    ],
+    'linebreak-style': ['error', 'windows'], // или 'crlf'
+    //'no-console': 'warn',
+    'no-console': 'off',
+    'vue/singleline-html-element-content-newline': 'off',
+    'vue/multiline-html-element-content-newline': 'off',
+    'vue/html-comment-content-newline': 'off',
+    'import/order': [
+      'error',
+      {
+        // 'newlines-between': 'always',
+        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+      },
+    ],
+  },
 };

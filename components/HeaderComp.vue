@@ -13,7 +13,7 @@ const isMenuOpen = ref(false);
 function onMenu() {
   isMenuOpen.value = !isMenuOpen.value;
   isLkOpen.value = false;
-  document.body.classList.toggle("lock", isMenuOpen.value);
+  document.body.classList.toggle('lock', isMenuOpen.value);
 }
 
 const isLkOpen = ref(false);
@@ -21,12 +21,12 @@ const isLkOpen = ref(false);
 function onLk() {
   isLkOpen.value = !isLkOpen.value;
   isMenuOpen.value = false;
-  document.body.classList.toggle("lock", isLkOpen.value);
+  document.body.classList.toggle('lock', isLkOpen.value);
 }
 function onClose() {
   isLkOpen.value = false;
   isMenuOpen.value = false;
-  document.body.classList.toggle("lock", false);
+  document.body.classList.toggle('lock', false);
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -36,7 +36,7 @@ async function onLogoutClick() {
 
     await logout();
 
-    await navigateTo("/");
+    await navigateTo('/');
   } catch (error) {
     console.error(error);
   } finally {

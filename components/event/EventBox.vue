@@ -15,8 +15,11 @@
         <div class="mini-info__text">2000 р</div>
       </div>
     </div>
-    <div class="title"><NuxtLink class="link" :to="`/${props.url}`">Организация деятельности учащихся, ориентированная на обеспечение информационной безопасности... </NuxtLink></div>  
-
+    <div class="title">
+      <NuxtLink class="link" :to="`/${props.url}`"
+        >Организация деятельности учащихся, ориентированная на обеспечение информационной безопасности...
+      </NuxtLink>
+    </div>
   </div>
 </template>
 <script setup lang="ts">

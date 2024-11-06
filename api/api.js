@@ -1,15 +1,15 @@
-import axios from "axios";
+import axios from 'axios';
 // import/no-mutable-exports
 let preApiUrl;
 // import/no-mutable-exports
 let preAppVersion;
 
-if (typeof window !== "undefined") {
+if (typeof window !== 'undefined') {
   const url = new URL(window.location.href);
-  console.log("url", url.port);
+  console.log('url', url.port);
   const currentUrl = window.location.hostname;
-  const resultUrl = currentUrl === "localhost" ? `localhost:${url.port}` : currentUrl;
-  preApiUrl = "http://" + resultUrl;
+  const resultUrl = currentUrl === 'localhost' ? `localhost:${url.port}` : currentUrl;
+  preApiUrl = 'http://' + resultUrl;
   preAppVersion = Date.parse(new Date()) + 26;
 } else {
   // Используйте серверную переменную окружения для определения URL-адреса API

@@ -3,9 +3,9 @@ export default defineEventHandler(async (event) => {
 
   deleteCookie(event, config.cookieName, {
     httpOnly: true,
-    path: "/",
-    sameSite: "strict",
-    secure: process.env.NODE_ENV === "production",
+    path: '/',
+    sameSite: 'strict',
+    secure: process.env.NODE_ENV === 'production',
   });
 
   return {

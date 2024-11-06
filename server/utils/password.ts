@@ -1,4 +1,4 @@
-import { Bcrypt } from "oslo/password";
+import { Bcrypt } from 'oslo/password';
 
 export async function hash(plainPassword: string) {
   return await new Bcrypt().hash(plainPassword);
