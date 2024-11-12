@@ -11,6 +11,11 @@
   padding: 0 19px 40px
   font-size: 16px
   break-inside: avoid
+  +r($lg)
+    padding: 0 12px 24px
+  +r($md)
+    flex: 0 0 50%
+    width: 50%
   &__wrapper
     width: 100%
     display: flex
@@ -59,9 +64,18 @@
   display: flex
   flex-wrap: wrap
   margin: 0 -20px
+  +r($lg)
+    margin: 0 -12px
 .item-recommend
   width: 33.333%
   padding: 0 20px
+  +r($lg)
+    padding: 0 12px 24px
+    width: 50%
+    flex: 0 0 50%
+  +r($md)
+    width: 100%
+    flex: 0 0 100%
   &-wrapper
     padding: 24px
     background: $clrGrey20

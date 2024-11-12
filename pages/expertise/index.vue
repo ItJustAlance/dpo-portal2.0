@@ -1,23 +1,24 @@
 <script lang="ts" setup>
-import { onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 
 import { useFiltersStore } from '~/stores/filters';
 
-const filtersStore = useFiltersStore();
+// const filtersStore = useFiltersStore();
 
 onMounted(async () => {
-  await onFilterData();
+  // await onFilterData();
 });
 
-const onFilterData = async () => {
-  const result = await filtersStore.initFilters();
-  console.log('onFilterData', result);
-  if (result === 'success') {
-    // нужно переделать для обновления в store
-    filtersStore.onInitFilter(true);
-    // initFilterData.value = true;
-  }
-};
+const tabIndex = ref('0');
+
+const tabList = ref([
+  { index: '0', name: 'Экспертиза дополнительных профессиональных программ (ДПП)' },
+  { index: '1', name: 'Материалы заседаний Экспертного совета по ДПО работников образовательных организаций' },
+  { index: '2', name: 'Нормативные документы, регламентирующие ДПО' },
+
+]);
+
+
 </script>
 
 <template>
@@ -25,25 +26,20 @@ const onFilterData = async () => {
     <div class="page-title h2-title">Экспертиза ДПП</div>
     <div class="b-container">
       <main class="content-body">
-        <Tabs value="0">
-          <TabList>
-            <Tab value="0" as="div" class="tab-item">
-              <div class="title-tab">Экспертиза дополнительных профессиональных программ (ДПП)</div>
-            </Tab>
-            <Tab value="1" as="div" class="tab-item">
-              <div class="title-tab">
-                Материалы заседаний Экспертного совета по ДПО работников образовательных организаций
-              </div>
-            </Tab>
-            <Tab value="2">
-              <div class="title-tab">Нормативные документы, регламентирующие ДПО</div>
+        <div class="tab-select visible-lg">
+          <Select v-model="tabIndex" :options="tabList" optionValue="index" optionLabel="name" />
+        </div>
+        <Tabs :value="tabIndex">
+          <TabList class="hidden-lg">
+            <Tab :value="item.index" as="div" class="tab-item" v-for="item in tabList" :key="item.index">
+              <div class="title-tab">{{ item.name }}</div>
             </Tab>
           </TabList>
           <TabPanels class="tabs-box">
             <TabPanel value="0">
-              <Accordion expand-icon="arr-expand-icon" collapse-icon="arr-collapse-icon" value="0">
+              <Accordion expand-icon="arr-expand-icon" collapse-icon="arr-collapse-icon">
                 <AccordionPanel value="0">
-                  <AccordionHeader>Порядок проведения экспертизы</AccordionHeader>
+                  <AccordionHeader><span class="tab-label">Порядок проведения экспертизы</span></AccordionHeader>
                   <AccordionContent>
                     <p class="m-0">
                       Уважаемые коллеги!<br />
@@ -60,7 +56,7 @@ const onFilterData = async () => {
                   </AccordionContent>
                 </AccordionPanel>
                 <AccordionPanel value="1">
-                  <AccordionHeader>Рекомендации по проектированию ДПП</AccordionHeader>
+                  <AccordionHeader><span class="tab-label">Рекомендации по проектированию ДПП</span></AccordionHeader>
                   <AccordionContent>
                     <div class="docs-list --cols2">
                       <div class="item-doc --white">
@@ -86,7 +82,7 @@ const onFilterData = async () => {
                   </AccordionContent>
                 </AccordionPanel>
                 <AccordionPanel value="2">
-                  <AccordionHeader>Форма заявки на проведение экспертизы</AccordionHeader>
+                  <AccordionHeader><span class="tab-label">Форма заявки на проведение экспертизы</span></AccordionHeader>
                   <AccordionContent>
                     <p class="m-0">
                       At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
@@ -98,7 +94,7 @@ const onFilterData = async () => {
                   </AccordionContent>
                 </AccordionPanel>
                 <AccordionPanel value="3">
-                  <AccordionHeader>Требования к ДПП, формы документов для экспертизы ДПП</AccordionHeader>
+                  <AccordionHeader><span class="tab-label">Требования к ДПП, формы документов для экспертизы ДПП</span></AccordionHeader>
                   <AccordionContent>
                     <p class="m-0">
                       At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
@@ -110,7 +106,7 @@ const onFilterData = async () => {
                   </AccordionContent>
                 </AccordionPanel>
                 <AccordionPanel value="4">
-                  <AccordionHeader>Эксперты</AccordionHeader>
+                  <AccordionHeader><span class="tab-label">Эксперты</span></AccordionHeader>
                   <AccordionContent>
                     <p class="m-0">
                       At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
@@ -123,9 +119,8 @@ const onFilterData = async () => {
                 </AccordionPanel>
                 <AccordionPanel value="5">
                   <AccordionHeader
-                    >План заседаний Экспертного совета и приема программ на экспертизу на 2023/2024 учебный
-                    год</AccordionHeader
-                  >
+                    ><span class="tab-label">План заседаний Экспертного совета и приема программ на экспертизу на 2023/2024 учебный год</span>
+                  </AccordionHeader>
                   <AccordionContent>
                     <p class="m-0">
                       At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum

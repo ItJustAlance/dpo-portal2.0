@@ -56,13 +56,13 @@ const onFilterShow = async (value) => {
                 </div>
               </div>
               <div class="result-filters__right --w-md-50">
-                <div class="result-filters__item">
+                <div class="result-filters__item --w-lg-100">
                   <Select
                     v-model="selectedCity"
                     :options="cities"
                     option-label="name"
                     placeholder="Дата"
-                    class="select-filter"
+                    class="select-filter --lg-full"
                   >
                     <template #dropdownicon>
                       <!-- Используем любую иконку, например, FontAwesome -->
@@ -71,13 +71,13 @@ const onFilterShow = async (value) => {
                   </Select>
                 </div>
                 <!--end result-filter__item -->
-                <div class="result-filters__item --select">
+                <div class="result-filters__item --select --w-lg-100">
                   <Select
                     v-model="selectedCity"
                     :options="cities"
                     option-label="name"
                     placeholder="Тема"
-                    class="select-filter"
+                    class="select-filter --lg-full"
                   >
                     <template #dropdownicon>
                       <!-- Используем любую иконку, например, FontAwesome -->
@@ -87,25 +87,9 @@ const onFilterShow = async (value) => {
                 </div>
                 <!--end result-filter__item -->
               </div>
-
-              <div class="result-filters__item visible-lg">
-                <button class="btn-filter btn-filter-show" @click="onFilterShow(true)">
-                  <SvgIcon name="faders-horizontal" class="fnone ic24"></SvgIcon>
-                </button>
-              </div>
             </div>
             <!--end result-filters -->
-            <div class="filter-list-first">
-              <div class="b-checkbox">
-                <Checkbox v-model="filterPopular" :binary="true" input-id="popular" name="filterPopular" />
-                <label for="popular">Популярные</label>
-              </div>
-              <div class="b-checkbox">
-                <Checkbox v-model="filterNew" :binary="true" input-id="filterNew" name="filterNew" />
-                <label for="filterNew">Новые</label>
-              </div>
-            </div>
-            <!--end filter-list-first -->
+            
           </div>
           <div class="result-content__body">
             <div class="news-list">

@@ -38,69 +38,72 @@ const breadcrumbList = ref([
                 Конкурс на присуждение премий лучшим учителям за достижения в педагогической деятельности в городе
                 Москве в 2023 году
               </h1>
-            </div>
-            <!-- end event-info -->
-          </div>
-          <!-- end event-header -->
+              <div class="img --img-mobile"><img src="/img/competition.png" alt="" /></div>
+            </div><!-- end event-info -->
+            
+          </div><!-- end event-header -->
         </section>
         <section class="section-big">
-          <div class="competition-progress">
-            <div class="progress-scroll" style="width: 35%"></div>
-            <div class="progress-list">
-              <div class="progress-circ active">
-                <div class="icon rocket">
-                  <SvgIcon name="rocket-launch" class="fnone ic24" />
-                </div>
-                <div class="date"><div class="txt">10.07.2023</div></div>
-                <div class="text">
-                  <div class="txt">
-                    <div class="titl">Старт приема заявок</div>
-                    118 заявок
+          <div class="competition-progress__wrapper">
+            <div class="competition-progress">
+              <div class="progress-scroll" style="width: 35%"></div>
+              <div class="progress-list">
+                <div class="progress-circ active">
+                  <div class="icon rocket">
+                    <SvgIcon name="rocket-launch" class="fnone ic24" />
+                  </div>
+                  <div class="date"><div class="txt">10.07.2023</div></div>
+                  <div class="text">
+                    <div class="txt">
+                      <div class="titl">Старт приема заявок</div>
+                      118 заявок
+                    </div>
                   </div>
                 </div>
-              </div>
-              <!--end progress-circ -->
-              <div class="progress-circ active">
-                <div class="icon">
-                  <SvgIcon name="check-circle" class="fnone ic24" />
-                </div>
-                <div class="date"><div class="txt">18.07.2023</div></div>
-                <div class="text">
-                  <div class="txt">
-                    <div class="titl">Проверка конкурсных материалов</div>
-                    118 заявок
+                <!--end progress-circ -->
+                <div class="progress-circ active">
+                  <div class="icon">
+                    <SvgIcon name="check-circle" class="fnone ic24" />
+                  </div>
+                  <div class="date"><div class="txt">18.07.2023</div></div>
+                  <div class="text">
+                    <div class="txt">
+                      <div class="titl">Проверка конкурсных материалов</div>
+                      118 заявок
+                    </div>
                   </div>
                 </div>
-              </div>
-              <!--end progress-circ -->
-              <div class="progress-circ">
-                <div class="icon">
-                  <SvgIcon name="check-circle" class="fnone ic24" />
-                </div>
-                <div class="date"><div class="txt">30.07.2023</div></div>
-                <div class="text">
-                  <div class="txt">
-                    <div class="titl">Проверка конкурсных материалов</div>
+                <!--end progress-circ -->
+                <div class="progress-circ">
+                  <div class="icon">
+                    <SvgIcon name="check-circle" class="fnone ic24" />
+                  </div>
+                  <div class="date"><div class="txt">30.07.2023</div></div>
+                  <div class="text">
+                    <div class="txt">
+                      <div class="titl">Проверка конкурсных материалов</div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <!--end progress-circ -->
-              <div class="progress-circ">
-                <div class="icon">
-                  <SvgIcon name="flag-checkered" class="fnone ic24" />
-                </div>
-                <div class="date"><div class="txt">31.07.2023</div></div>
-                <div class="text">
-                  <div class="txt">
-                    <div class="titl">Итоги</div>
+                <!--end progress-circ -->
+                <div class="progress-circ">
+                  <div class="icon">
+                    <SvgIcon name="flag-checkered" class="fnone ic24" />
+                  </div>
+                  <div class="date"><div class="txt">31.07.2023</div></div>
+                  <div class="text">
+                    <div class="txt">
+                      <div class="titl">Итоги</div>
+                    </div>
                   </div>
                 </div>
+                <!--end progress-circ -->
               </div>
-              <!--end progress-circ -->
+              <!--end progress-list -->
             </div>
-            <!--end progress-list -->
-          </div>
-          <!--end competition-progress -->
+            <!--end competition-progress -->  
+          </div><!--end competition-progress__wrapper -->
+          
         </section>
         <section class="section-big">
           <div class="course-nav-box">

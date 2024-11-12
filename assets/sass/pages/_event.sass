@@ -6,6 +6,15 @@
     .img
       flex: 0 0 460px
       margin-right: 40px
+      &.--img-mobile
+        display: none
+        margin-bottom: 48px
+        +r($lg)
+          flex: 0
+      +r($lg)
+        display: none
+        &.--img-mobile
+          display: block
     .event-info
       flex: 1 1 auto
       .h1-title
@@ -13,6 +22,12 @@
         margin: 0
         padding: 12px 0 64px
         line-height: 1.2
+        +r($xl)
+          font-size: 38px
+          padding-bottom: 38px
+        +r($md)
+          font-size: 28px
+          padding-bottom: 24px
     .course-info__about
       flex-wrap: wrap
       gap: 0
@@ -20,6 +35,11 @@
       .b-item
         padding: 0 20px
         flex: 0 0 50%
+        +r($md)
+          flex: 0 0 100%
+          text-align: center
+          .b-text
+            justify-content: center
   &-info
     display: flex
     flex-direction: column
@@ -28,7 +48,14 @@
       padding-top: 40px
       margin-top: auto
       align-items: center
+      +r($md)
+        display: block
+        text-align: center
+        .b-btn
+          width: 100%
       .price
         font-size: 48px
         font-weight: bold
         margin-right: 32px
+        +r($md)
+          margin-bottom: 48px

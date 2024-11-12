@@ -1,7 +1,18 @@
 .menu-aside
   min-width: 300px
   max-width: 300px
+  +r($lg)
+    min-width: 100%
+    max-width: 100%
+  .menu-legal-info
+    &__wrapper
+      +r($lg)
+        display: none
+        &.open
+          display: block
   .menu-item
+    li
+      display: block
     &__title
       color: $clrGrey90
       padding: 8px 0
@@ -32,6 +43,8 @@
         
   & + .content-body
     padding-left: 40px
+    +r($lg)
+      padding-left: 0
 
 .content-legal
   border-radius: 16px

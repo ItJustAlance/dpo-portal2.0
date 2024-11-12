@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue';
 import { storeToRefs } from 'pinia';
 // import { useAuthStore } from "@/stores/auth";
-import { useFiltersStore } from '~/stores/filters';
+// import { useFiltersStore } from '~/stores/filters';
 
 // const currentUser = useAuthUser();
 
@@ -122,7 +122,7 @@ const filterCourse = ref({ id: 2, name: 'Курсы', value: 'val' });
                 </div>
               </div>
               <div class="result-filters__right --w-md-50">
-                <div class="result-filters__item">
+                <div class="result-filters__item --w-lg-100 --lg-order-1">
                   <div class="b-checkbox">
                     <Checkbox
                       v-model="filterCourse.value"
@@ -135,13 +135,13 @@ const filterCourse = ref({ id: 2, name: 'Курсы', value: 'val' });
                   </div>
                 </div>
                 <!--end result-filter__item -->
-                <div class="result-filters__item --select">
+                <div class="result-filters__item --select --w-lg-100 --lg-order-0">
                   <Select
                     v-model="selectedCity"
                     :options="cities"
                     option-label="name"
                     placeholder="Организатор"
-                    class="select-filter"
+                    class="select-filter --lg-full"
                   >
                     <template #dropdownicon>
                       <!-- Используем любую иконку, например, FontAwesome -->
@@ -153,7 +153,7 @@ const filterCourse = ref({ id: 2, name: 'Курсы', value: 'val' });
               </div>
             </div>
             <!--end result-filters -->
-            <div class="filter-list-first">
+            <div class="filter-list-first hidden-lg">
               <div class="b-checkbox">
                 <Checkbox v-model="filterPopular" :binary="true" input-id="popular" name="filterPopular" />
                 <label for="popular">Популярные</label>
@@ -166,7 +166,7 @@ const filterCourse = ref({ id: 2, name: 'Курсы', value: 'val' });
             <!--end filter-list-first -->
           </div>
           <div class="result-content__body">
-            <div class="program-list">
+            <div class="program-list --lg-after">
               <div v-for="item in programsList" class="program-item" :key="item.id">
                 <ProgramBox :data="item" :key="item.id" />
               </div>

@@ -81,9 +81,10 @@
         flex: 0 0 50%
         padding: 0 20px
         margin-bottom: 36px
-      +r($xs)
+      +r($smm)
         flex: 0 0 100%
         text-align: center
+        margin-bottom: 10px
       .b-label
         color: $clrGrey70
         margin-bottom: 12px
@@ -96,6 +97,8 @@
         font-weight: 700
         font-size: 18px
         display: flex
+        +r($smm)
+          justify-content: center
         img, .svg-icon
           margin-top: 5px
           min-width: 16px
@@ -113,6 +116,12 @@
             max-width: 50%
             padding: 0 10px
             display: flex
+          .col-xs-100
+            +r($sm)
+              min-width: 100%
+              max-width: 100%
+              padding: 15px 10px 0
+              display: flex
 .course-nav
   &-box
     display: flex
@@ -254,6 +263,7 @@
   gap: 8px
   +r($lg)
     margin-bottom: 32px
+    flex-wrap: wrap
   &__item
     margin-bottom: 24px
     display: flex
@@ -273,6 +283,12 @@
     display: flex
     justify-content: flex-end
     gap: 8px
+    +r($lg)
+      flex-wrap: wrap
+  .--w-lg-100
+    +r($lg)
+      max-width: 100%
+      min-width: 100%
   .--w-md-50
     max-width: 50%
     min-width: 50%
@@ -288,7 +304,8 @@
     border: 1px solid #F0F0F0
     border-radius: 100px
     padding: 10px 24px
- 
+  .search-box
+    width: 100%
 .slider-teacher
   +r($sm)
     margin-bottom: 30px

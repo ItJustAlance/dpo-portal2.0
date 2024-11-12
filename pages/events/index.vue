@@ -111,17 +111,7 @@ const onFilterShow = async (value) => {
               </div>
             </div>
             <!--end result-filters -->
-            <div class="filter-list-first">
-              <div class="b-checkbox">
-                <Checkbox v-model="filterPopular" :binary="true" input-id="popular" name="filterPopular" />
-                <label for="popular">Популярные</label>
-              </div>
-              <div class="b-checkbox">
-                <Checkbox v-model="filterNew" :binary="true" input-id="filterNew" name="filterNew" />
-                <label for="filterNew">Новые</label>
-              </div>
-            </div>
-            <!--end filter-list-first -->
+            
           </div>
           <div class="result-content__body">
             <div class="event-list">

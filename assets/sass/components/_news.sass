@@ -6,6 +6,12 @@
 .news-item
   width: 33.333%
   padding: 0 20px 48px
+  +r($lg)
+    width: 50%
+    flex: 0 0 50%
+  +r($sm)
+    width: 100%
+    flex: 0 0 100%
   &__wrapper
     width: 100%
     display: flex
@@ -66,6 +72,8 @@
     line-height: 1.2
     margin: 0 0 24px
     padding: 0
+    +r($md)
+      font-size: 36px
   .date
     display: flex
     align-items: center

@@ -137,7 +137,7 @@ const programsList = [
         </section>
         <section>
           <h2 class="h2-title section-title">Еще программы этой организации</h2>
-          <div class="program-list">
+          <div class="program-list --lg-after">
             <div v-for="item in programsList" :key="item.id" class="program-item">
               <ProgramBox :data="item" />
             </div>

@@ -10,10 +10,23 @@
       min-width: 25%
       max-width: 25%
       width: 25%
+      +r($lg)
+        min-width: 50%
+        max-width: 50%
+        width: 50%
+        margin-bottom: 36px
+      +r($smm)
+        min-width: 100%
+        max-width: 100%
+        width: 100%
   &.--list-3-column
     column-count: 3
     font-size: 1px
     display: block
+    +r($md)
+      column-count: 2
+    +r($smm)
+      column-count: auto
     .event-item
       font-size: 16px
       break-inside: avoid
@@ -21,7 +34,11 @@
       
 .event-item
   width: 33.333%
-  padding: 0 20px 20px
+  padding: 0 20px 36px
+  +r($md)
+    width: 50%
+  +r($smm)
+    width: 100%
   &.--mini-img
     .img
       max-height: 130px

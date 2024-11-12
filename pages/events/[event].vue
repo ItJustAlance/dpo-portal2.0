@@ -109,6 +109,7 @@ const sliderTeach = reactive({
               <h1 class="h1-title">
                 Образование Древнерусского государства и формирование его территорий в IX - н. XII вв.
               </h1>
+              <div class="img --img-mobile"><img src="/img/big-event.png" alt="" /></div>
               <div class="course-info__about">
                 <div class="b-item">
                   <div class="b-label">ДАТА</div>
@@ -152,7 +153,7 @@ const sliderTeach = reactive({
               <!--end course-info__about-->
               <div class="event-info-bottom">
                 <div class="price">2300р</div>
-                <div class="b-btn"><button class="btn">Записаться</button></div>
+                <div class="b-btn"><button class="btn btn--md-full">Записаться</button></div>
               </div>
             </div>
             <!--end event-info -->
@@ -311,7 +312,7 @@ const sliderTeach = reactive({
           </div>
         </section>
 
-        <section class="section-big">
+        <section class="section-big --last">
           <h2 class="h2-title section-title">Организатор</h2>
           <div class="course-organizator-info">
             <div class="b-info">
@@ -324,13 +325,13 @@ const sliderTeach = reactive({
                   <div class="b-label">ТАТУНОВ ЮРИЙ ЮРЬЕВИЧ</div>
                   <div class="b-text">
                     <div class="text-row">
-                      <div class="col-md-50">
+                      <div class="col-md-50 col-xs-100">
                         <div class="b-icon">
                           <img src="/img/phone.svg" alt="" />
                         </div>
                         +7(495)114-56-28
                       </div>
-                      <div class="col-md-50">
+                      <div class="col-md-50 col-xs-100">
                         <div class="b-icon">
                           <img src="/img/email.svg" alt="" />
                         </div>
@@ -343,13 +344,13 @@ const sliderTeach = reactive({
                   <div class="b-label">АРБИЕВ РУСЛАН МУСЛИМОВИЧ</div>
                   <div class="b-text">
                     <div class="text-row">
-                      <div class="col-md-50">
+                      <div class="col-md-50 col-xs-100">
                         <div class="b-icon">
                           <img src="/img/phone.svg" alt="" />
                         </div>
                         +7(495)114-56-28
                       </div>
-                      <div class="col-md-50">
+                      <div class="col-md-50 col-xs-100">
                         <div class="b-icon">
                           <img src="/img/email.svg" alt="" />
                         </div>
